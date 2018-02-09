@@ -15,6 +15,7 @@ using ColorMesure.Extensions;
 namespace WinColorMesure
 {
     using Debug = System.Diagnostics.Debug;
+    using CultureInfo = System.Globalization.CultureInfo;
 
     public partial class MainForm : Form
     {
@@ -28,19 +29,19 @@ namespace WinColorMesure
         Point _lastCursorPos = Point.Empty;
 
         // shared TSMenu Items
-        ToolStripMenuItem copyColorMenuItem;
+        //ToolStripMenuItem copyColorMenuItem;
 
         public MainForm()
         {
             InitializeComponent();
             _zoomFactor = zoomTrackBar.Value;
 
-            copyColorMenuItem = new ToolStripMenuItem()
-            {
-                Text = "Copiar cor",
-                ShortcutKeys = (Keys)Shortcut.CtrlC
-            };
-            copyColorMenuItem.Click += OnCopyColorText_Click;
+            //copyColorMenuItem = new ToolStripMenuItem()
+            //{
+            //    Text = "Copiar cor",
+            //    ShortcutKeys = (Keys)Shortcut.CtrlC
+            //};
+            //copyColorMenuItem.Click += OnCopyColorText_Click;
 
 
             rgbFormatMenuItem.Tag = ColorInfoFormat.RGB;
@@ -50,7 +51,6 @@ namespace WinColorMesure
             _pixelGetter = new GDIPixelGetter();
 
             UpdatePreviewImage();
-            
         }
 
 
@@ -148,8 +148,10 @@ namespace WinColorMesure
 
         private void UpdateColorHistory()
         {
+            // clear local
             historyMenuItem.DropDownItems.Clear();
 
+            // construct list of recent colors
             foreach (var c in colorHistory)
             {
                 Bitmap bm = new Bitmap(30, 30);
@@ -183,9 +185,22 @@ namespace WinColorMesure
                 imageBoxZoom.MaximumZoom - imageBoxZoom.MinimumZoom + 1);
             
             zoomTSComboBox.Items.AddRange(zoomRange.Select(z => "x" + z).ToArray());
-            zoomTSComboBox.SelectedIndex = zoomTSComboBox.Items.IndexOf("x" + _zoomFactor);
+            zoomTSComboBox.SelectedItem = "x" + _zoomFactor;
+
+            // lang
+            CultureInfo english = new CultureInfo("en"),
+                ptbr = new CultureInfo("pt-br");
+
+            int selected = System.Threading.
+                Thread.CurrentThread.CurrentCulture.Name == ptbr.Name ? 1 : 0;
+
+            langTSComboBox.Items.Add(english);
+            langTSComboBox.Items.Add(ptbr);
+            langTSComboBox.SelectedIndex = selected;
+            langTSComboBox.SelectedIndexChanged += langTSComboBox_SelectedIndexChanged;
+
         }
-        
+
         private void ZoomTSComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             var item = zoomTSComboBox.SelectedItem;
@@ -197,19 +212,13 @@ namespace WinColorMesure
 
         private void ImageBoxZoom_MouseLeave(object sender, EventArgs e)
         {
-            statusLabel.Text = "{OB}";
+            statusLabel.Text = "Mouse: {OB}";
         }
 
 
         private void ImageBoxZoom_MouseMove(object sender, MouseEventArgs e)
         {
-            //if (UpdateColorOnMouseMove)
-            //{
-            //    var color = _pixelGetter.GetPixelColor();
-            //    UpdateCurrentColor(color);
-            //}
-
-            statusLabel.Text = "Mouse pos: " + e.Location;
+            statusLabel.Text = "Mouse: " + e.Location;
         }
 
         private void imageBoxZoom_Click(object sender, EventArgs e)
@@ -272,11 +281,8 @@ namespace WinColorMesure
         {
             if (sender is ContextMenuStrip cm)
             {
-                // add shared context menu items
                 if (cm == colorContextMenu)
                 {
-                    colorContextMenu.Items.Insert(0, copyColorMenuItem);
-
                     var color = _pixelGetter.GetPixelColor();
                     UpdateCurrentColor(color);
                 }
@@ -307,9 +313,22 @@ namespace WinColorMesure
 
         private void OnSharedDropdown_Opening(object sender, EventArgs e)
         {
-            fileToolStripMenuItem.DropDownItems.Insert(1, copyColorMenuItem);
+            //fileToolStripMenuItem.DropDownItems.Insert(1, copyColorMenuItem);
         }
-        
+
+        private void langTSComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // TODO: not working ATM, how to localize at runtime?
+            var culture = (CultureInfo)langTSComboBox.SelectedItem;
+            var res = new ComponentResourceManager(typeof(MainForm));
+
+            foreach (Control ctrl in Controls)
+            {
+                res.ApplyResources(ctrl, ctrl.Name, culture);
+            }
+
+            System.Threading.Thread.CurrentThread.CurrentUICulture = culture;
+        }
     }
 
 }

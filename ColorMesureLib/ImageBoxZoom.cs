@@ -12,6 +12,8 @@ using System.Drawing.Drawing2D;
 
 namespace ColorMesure
 {
+    using Debug = System.Diagnostics.Debug;
+
     public partial class ImageBoxZoom : UserControl
     {
         private ContentAlignment _zoomPopupPos = ContentAlignment.TopLeft;
@@ -167,9 +169,7 @@ namespace ColorMesure
             // stops the ZoomBox beeing sometimes missaligned
             // in the designer
             if (DesignMode)
-            {
                 RefreshZoomBoxAlignment();
-            }
 
             base.OnResize(e);
         }
@@ -225,7 +225,6 @@ namespace ColorMesure
 
         private void SetZoomBoxAlignment(ContentAlignment alignment)
         {
-
             Rectangle area = new Rectangle(new Point(3, 3), zoomPopupBox.Size);
             int rbOffset = _scrollVisible ? 25 : 5;
 
@@ -279,8 +278,9 @@ namespace ColorMesure
 
             _zoomPopupPos = alignment;
 
-            zoomPopupBox.Location = area.Location;
+            Debug.Assert(_zoomPopupPos != _altZoomPos);
 
+            zoomPopupBox.Location = area.Location;
         }
 
         private Bitmap CreateZoomedBitmap(Point centerPt, Size tgtSize)

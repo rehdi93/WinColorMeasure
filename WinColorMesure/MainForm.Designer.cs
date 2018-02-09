@@ -33,6 +33,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.refreshPreviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.copyColorTSMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imageMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,6 +42,8 @@
             this.zoomTSComboBox = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.idiomaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.langTSComboBox = new System.Windows.Forms.ToolStripComboBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.statusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -53,6 +56,7 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.pColor = new System.Windows.Forms.Panel();
             this.colorContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.copyColorTSMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.copyColorAsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textFormatContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.rgbFormatMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -78,94 +82,115 @@
             // 
             // menuStrip1
             // 
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.imageMenuItem,
-            this.sobreToolStripMenuItem});
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
+            this.sobreToolStripMenuItem,
+            this.idiomaToolStripMenuItem});
             this.menuStrip1.Name = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
+            resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.refreshPreviewToolStripMenuItem,
+            this.copyColorTSMenuItem1,
             this.toolStripSeparator1,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
             this.fileToolStripMenuItem.DropDownOpening += new System.EventHandler(this.OnSharedDropdown_Opening);
             this.fileToolStripMenuItem.Click += new System.EventHandler(this.OnCopyColorText_Click);
             // 
             // refreshPreviewToolStripMenuItem
             // 
-            this.refreshPreviewToolStripMenuItem.Name = "refreshPreviewToolStripMenuItem";
             resources.ApplyResources(this.refreshPreviewToolStripMenuItem, "refreshPreviewToolStripMenuItem");
+            this.refreshPreviewToolStripMenuItem.Name = "refreshPreviewToolStripMenuItem";
             this.refreshPreviewToolStripMenuItem.Click += new System.EventHandler(this.atualizarPreviewToolStripMenuItem_Click);
+            // 
+            // copyColorTSMenuItem1
+            // 
+            resources.ApplyResources(this.copyColorTSMenuItem1, "copyColorTSMenuItem1");
+            this.copyColorTSMenuItem1.Name = "copyColorTSMenuItem1";
+            this.copyColorTSMenuItem1.Click += new System.EventHandler(this.OnCopyColorText_Click);
             // 
             // toolStripSeparator1
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
             resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
             // 
             // exitToolStripMenuItem
             // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // imageMenuItem
             // 
+            resources.ApplyResources(this.imageMenuItem, "imageMenuItem");
             this.imageMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.historyMenuItem,
             this.zoomTSMenuItem});
             this.imageMenuItem.Name = "imageMenuItem";
-            resources.ApplyResources(this.imageMenuItem, "imageMenuItem");
             this.imageMenuItem.DropDownOpening += new System.EventHandler(this.historyMenuItem_DropDownOpening);
             // 
             // historyMenuItem
             // 
-            this.historyMenuItem.Name = "historyMenuItem";
             resources.ApplyResources(this.historyMenuItem, "historyMenuItem");
+            this.historyMenuItem.Name = "historyMenuItem";
             // 
             // zoomTSMenuItem
             // 
+            resources.ApplyResources(this.zoomTSMenuItem, "zoomTSMenuItem");
             this.zoomTSMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.zoomTSComboBox,
             this.toolStripSeparator3});
             this.zoomTSMenuItem.Name = "zoomTSMenuItem";
-            resources.ApplyResources(this.zoomTSMenuItem, "zoomTSMenuItem");
             // 
             // zoomTSComboBox
             // 
-            this.zoomTSComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             resources.ApplyResources(this.zoomTSComboBox, "zoomTSComboBox");
+            this.zoomTSComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.zoomTSComboBox.Name = "zoomTSComboBox";
             this.zoomTSComboBox.SelectedIndexChanged += new System.EventHandler(this.ZoomTSComboBox_SelectedIndexChanged);
             // 
             // toolStripSeparator3
             // 
+            resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
             this.toolStripSeparator3.ForeColor = System.Drawing.SystemColors.Control;
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
             // 
             // sobreToolStripMenuItem
             // 
-            this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
             resources.ApplyResources(this.sobreToolStripMenuItem, "sobreToolStripMenuItem");
+            this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
+            // 
+            // idiomaToolStripMenuItem
+            // 
+            resources.ApplyResources(this.idiomaToolStripMenuItem, "idiomaToolStripMenuItem");
+            this.idiomaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.langTSComboBox});
+            this.idiomaToolStripMenuItem.Name = "idiomaToolStripMenuItem";
+            // 
+            // langTSComboBox
+            // 
+            resources.ApplyResources(this.langTSComboBox, "langTSComboBox");
+            this.langTSComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.langTSComboBox.Name = "langTSComboBox";
             // 
             // statusStrip1
             // 
+            resources.ApplyResources(this.statusStrip1, "statusStrip1");
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statusLabel});
-            resources.ApplyResources(this.statusStrip1, "statusStrip1");
             this.statusStrip1.Name = "statusStrip1";
             // 
             // statusLabel
             // 
-            this.statusLabel.Name = "statusLabel";
             resources.ApplyResources(this.statusLabel, "statusLabel");
+            this.statusLabel.Name = "statusLabel";
             // 
             // panel1
             // 
@@ -179,17 +204,17 @@
             // 
             // formatGbox
             // 
-            this.formatGbox.Controls.Add(this.flowLayoutPanel1);
             resources.ApplyResources(this.formatGbox, "formatGbox");
+            this.formatGbox.Controls.Add(this.flowLayoutPanel1);
             this.formatGbox.Name = "formatGbox";
             this.formatGbox.TabStop = false;
             // 
             // flowLayoutPanel1
             // 
+            resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
             this.flowLayoutPanel1.Controls.Add(this.rgbRadioButton);
             this.flowLayoutPanel1.Controls.Add(this.cmykRadioButton);
             this.flowLayoutPanel1.Controls.Add(this.hexRadioButton);
-            resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             // 
             // rgbRadioButton
@@ -217,43 +242,51 @@
             // 
             // colorGBox
             // 
-            this.colorGBox.Controls.Add(this.flowLayoutPanel2);
             resources.ApplyResources(this.colorGBox, "colorGBox");
+            this.colorGBox.Controls.Add(this.flowLayoutPanel2);
             this.colorGBox.Name = "colorGBox";
             this.colorGBox.TabStop = false;
             // 
             // flowLayoutPanel2
             // 
+            resources.ApplyResources(this.flowLayoutPanel2, "flowLayoutPanel2");
             this.flowLayoutPanel2.Controls.Add(this.pColor);
             this.flowLayoutPanel2.Controls.Add(this.colorInfoLabel);
-            resources.ApplyResources(this.flowLayoutPanel2, "flowLayoutPanel2");
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             // 
             // pColor
             // 
+            resources.ApplyResources(this.pColor, "pColor");
             this.pColor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pColor.ContextMenuStrip = this.colorContextMenu;
-            resources.ApplyResources(this.pColor, "pColor");
             this.pColor.Name = "pColor";
             // 
             // colorContextMenu
             // 
+            resources.ApplyResources(this.colorContextMenu, "colorContextMenu");
             this.colorContextMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.colorContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.copyColorTSMenuItem2,
             this.copyColorAsMenuItem});
             this.colorContextMenu.Name = "colorContextMenu";
             this.colorContextMenu.ShowImageMargin = false;
-            resources.ApplyResources(this.colorContextMenu, "colorContextMenu");
             this.colorContextMenu.Opening += new System.ComponentModel.CancelEventHandler(this.OnOpeningSharedMenu);
+            // 
+            // copyColorTSMenuItem2
+            // 
+            resources.ApplyResources(this.copyColorTSMenuItem2, "copyColorTSMenuItem2");
+            this.copyColorTSMenuItem2.Name = "copyColorTSMenuItem2";
+            this.copyColorTSMenuItem2.Click += new System.EventHandler(this.OnCopyColorText_Click);
             // 
             // copyColorAsMenuItem
             // 
+            resources.ApplyResources(this.copyColorAsMenuItem, "copyColorAsMenuItem");
             this.copyColorAsMenuItem.DropDown = this.textFormatContextMenu;
             this.copyColorAsMenuItem.Name = "copyColorAsMenuItem";
-            resources.ApplyResources(this.copyColorAsMenuItem, "copyColorAsMenuItem");
             // 
             // textFormatContextMenu
             // 
+            resources.ApplyResources(this.textFormatContextMenu, "textFormatContextMenu");
             this.textFormatContextMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.textFormatContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.rgbFormatMenuItem,
@@ -262,25 +295,24 @@
             this.textFormatContextMenu.Name = "textFormatContextMenu";
             this.textFormatContextMenu.OwnerItem = this.copyColorAsMenuItem;
             this.textFormatContextMenu.ShowImageMargin = false;
-            resources.ApplyResources(this.textFormatContextMenu, "textFormatContextMenu");
             this.textFormatContextMenu.Opening += new System.ComponentModel.CancelEventHandler(this.OnOpeningSharedMenu);
             // 
             // rgbFormatMenuItem
             // 
-            this.rgbFormatMenuItem.Name = "rgbFormatMenuItem";
             resources.ApplyResources(this.rgbFormatMenuItem, "rgbFormatMenuItem");
+            this.rgbFormatMenuItem.Name = "rgbFormatMenuItem";
             this.rgbFormatMenuItem.Click += new System.EventHandler(this.ColorTextFormatItems_Click);
             // 
             // cmykFormatMenuItem
             // 
-            this.cmykFormatMenuItem.Name = "cmykFormatMenuItem";
             resources.ApplyResources(this.cmykFormatMenuItem, "cmykFormatMenuItem");
+            this.cmykFormatMenuItem.Name = "cmykFormatMenuItem";
             this.cmykFormatMenuItem.Click += new System.EventHandler(this.ColorTextFormatItems_Click);
             // 
             // hexFormatMenuItem
             // 
-            this.hexFormatMenuItem.Name = "hexFormatMenuItem";
             resources.ApplyResources(this.hexFormatMenuItem, "hexFormatMenuItem");
+            this.hexFormatMenuItem.Name = "hexFormatMenuItem";
             this.hexFormatMenuItem.Click += new System.EventHandler(this.ColorTextFormatItems_Click);
             // 
             // colorInfoLabel
@@ -397,6 +429,10 @@
         private System.Windows.Forms.ToolStripMenuItem zoomTSMenuItem;
         private System.Windows.Forms.ToolStripComboBox zoomTSComboBox;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem copyColorTSMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem copyColorTSMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem idiomaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripComboBox langTSComboBox;
     }
 }
 

@@ -118,10 +118,82 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="refreshPreviewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 26</value>
+  </data>
+  <data name="refreshPreviewToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Update Preview</value>
+  </data>
+  <data name="copyColorTSMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 26</value>
+  </data>
+  <data name="copyColorTSMenuItem1.Text" xml:space="preserve">
+    <value>&amp;Copy color</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 6</value>
+  </data>
+  <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 26</value>
+  </data>
+  <data name="exitToolStripMenuItem.Text" xml:space="preserve">
+    <value>E&amp;xit</value>
+  </data>
+  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 24</value>
+  </data>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;File</value>
+  </data>
   <data name="historyMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 26</value>
+    <value>131, 26</value>
+  </data>
+  <data name="historyMenuItem.Text" xml:space="preserve">
+    <value>&amp;History</value>
   </data>
   <data name="zoomTSMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 26</value>
+    <value>131, 26</value>
+  </data>
+  <data name="imageMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 24</value>
+  </data>
+  <data name="imageMenuItem.Text" xml:space="preserve">
+    <value>&amp;Image</value>
+  </data>
+  <data name="sobreToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 24</value>
+  </data>
+  <data name="sobreToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;About</value>
+  </data>
+  <data name="idiomaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 24</value>
+  </data>
+  <data name="idiomaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="formatGbox.Text" xml:space="preserve">
+    <value>Format</value>
+  </data>
+  <data name="copyColorTSMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>176, 24</value>
+  </data>
+  <data name="copyColorTSMenuItem2.Text" xml:space="preserve">
+    <value>&amp;Copy color</value>
+  </data>
+  <data name="copyColorAsMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>176, 24</value>
+  </data>
+  <data name="copyColorAsMenuItem.Text" xml:space="preserve">
+    <value>Copy color &amp;as...</value>
+  </data>
+  <data name="colorContextMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 52</value>
+  </data>
+  <data name="colorGBox.Text" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="atualizarPrevBtn.Text" xml:space="preserve">
+    <value>&amp;Update preview</value>
   </data>
 </root>
