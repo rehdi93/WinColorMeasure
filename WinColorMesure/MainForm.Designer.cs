@@ -67,7 +67,7 @@
             this.zoomTrackBar = new System.Windows.Forms.TrackBar();
             this.zoomFactorLabel = new System.Windows.Forms.Label();
             this.colorDialog = new System.Windows.Forms.ColorDialog();
-            this.imageBoxZoom = new ColorMesure.ImageBoxZoom();
+            this.imageBoxZoom = new WinColorMesure.UI.ImageBoxZoom();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -292,6 +292,7 @@
             this.cmykFormatMenuItem,
             this.hexFormatMenuItem});
             this.textFormatContextMenu.Name = "textFormatContextMenu";
+            this.textFormatContextMenu.OwnerItem = this.copyColorAsMenuItem;
             this.textFormatContextMenu.ShowImageMargin = false;
             resources.ApplyResources(this.textFormatContextMenu, "textFormatContextMenu");
             this.textFormatContextMenu.Opening += new System.ComponentModel.CancelEventHandler(this.OnOpeningSharedMenu);
@@ -349,14 +350,10 @@
             this.imageBoxZoom.ContextMenuStrip = this.colorContextMenu;
             this.imageBoxZoom.Cursor = System.Windows.Forms.Cursors.Cross;
             this.imageBoxZoom.Image = null;
-            this.imageBoxZoom.MaximumZoom = 6;
-            this.imageBoxZoom.MinimumZoom = 2;
             this.imageBoxZoom.Name = "imageBoxZoom";
-            this.imageBoxZoom.PopupPosition = System.Drawing.ContentAlignment.TopRight;
             this.imageBoxZoom.PopupPositionAlt = System.Drawing.ContentAlignment.BottomRight;
             this.imageBoxZoom.PopupSize = 200;
-            this.imageBoxZoom.ShowPopup = true;
-            this.imageBoxZoom.ZoomFactor = 3;
+            this.imageBoxZoom.ZoomFactorChanged += new System.EventHandler<int>(this.imageBoxZoom_ZoomFactorChanged);
             this.imageBoxZoom.Click += new System.EventHandler(this.imageBoxZoom_Click);
             this.imageBoxZoom.MouseLeave += new System.EventHandler(this.ImageBoxZoom_MouseLeave);
             this.imageBoxZoom.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ImageBoxZoom_MouseMove);
@@ -421,7 +418,7 @@
         private System.Windows.Forms.ToolStripMenuItem historyMenuItem;
         private System.Windows.Forms.TrackBar zoomTrackBar;
         private System.Windows.Forms.Label zoomFactorLabel;
-        private ColorMesure.ImageBoxZoom imageBoxZoom;
+        private WinColorMesure.UI.ImageBoxZoom imageBoxZoom;
         private System.Windows.Forms.GroupBox formatGbox;
         private System.Windows.Forms.GroupBox colorGBox;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;

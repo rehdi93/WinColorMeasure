@@ -5,7 +5,7 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Windows.Forms;
 
-namespace ColorMesure
+namespace WinColorMesure.UI
 {
     using Debug = System.Diagnostics.Debug;
 
@@ -31,6 +31,8 @@ namespace ColorMesure
 
         #region Public Api
 
+        [Category("Zoom")]
+        [DefaultValue(ContentAlignment.TopRight)]
         public ContentAlignment PopupPosition
         {
             get => _zoomPopupPos;
@@ -44,6 +46,7 @@ namespace ColorMesure
             }
         }
 
+        [Category("Zoom")]
         public ContentAlignment PopupPositionAlt
         {
             get => _altZoomPos;
@@ -60,32 +63,68 @@ namespace ColorMesure
             }
         }
 
+        [Category("Zoom")]
+        [DefaultValue(3)]
         public int ZoomFactor
         {
             get => _zoomFactor;
+            set => SetZoomFactor(value);
+        }
+
+        [Category("Zoom")]
+        [DefaultValue(2)]
+        public int MinimumZoom
+        {
+            get => _minZoom;
             set
             {
-                var nz = Math.Min(_maxZoom, Math.Max(value, _minZoom));
-                if (nz != _zoomFactor)
+                if (value != _minZoom)
                 {
-                    _zoomFactor = nz;
-                    OnZoomFactorChanged(nz);
+                    _minZoom = value;
+                    SetZoomFactor(_zoomFactor);
                 }
             }
         }
 
-        public int MinimumZoom
-        {
-            get => _minZoom;
-            set => _minZoom = value;
-        }
-
+        [Category("Zoom")]
+        [DefaultValue(6)]
         public int MaximumZoom
         {
             get => _maxZoom;
-            set => _maxZoom = value;
+            set
+            {
+                if (value != _maxZoom)
+                {
+                    _maxZoom = value;
+                    SetZoomFactor(_zoomFactor);
+                }
+            }
         }
 
+        [Category("Zoom")]
+        [DefaultValue(true)]
+        public bool ShowPopup
+        {
+            get => zoomPopupBox.Visible;
+            set => zoomPopupBox.Visible = value;
+        }
+
+        [Category("Zoom")]
+        [DefaultValue(150)]
+        public int PopupSize
+        {
+            get => zoomPopupBox.Width;
+            set
+            {
+                // the zoomPopup must remain square
+                zoomPopupBox.Width = value;
+                zoomPopupBox.Height = value;
+
+                RefreshZoomBoxAlignment();
+            }
+        }
+
+        [Category("Appearance")]
         public Image Image
         {
             get { return this.imgBox.Image; }
@@ -111,29 +150,24 @@ namespace ColorMesure
             }
         }
 
-        public int PopupSize
-        {
-            get => zoomPopupBox.Width;
-            set
-            {
-                // the zoomPopup must remain square
-                zoomPopupBox.Width = value;
-                zoomPopupBox.Height = value;
 
-                RefreshZoomBoxAlignment();
-            }
-        }
 
-        public bool ShowPopup
-        {
-            get => zoomPopupBox.Visible;
-            set => zoomPopupBox.Visible = value;
-        }
-
+        [Category("Zoom")]
         public event EventHandler<int> ZoomFactorChanged;
 
+        [Category("Zoom")]
         public event EventHandler PopupBoundsChanged;
 
+        #endregion
+
+        #region Designer hidden Stuff
+        [Browsable(false)]
+        public override Image BackgroundImage
+        { get => base.BackgroundImage; set => base.BackgroundImage = value; }
+
+        [Browsable(false)]
+        public override ImageLayout BackgroundImageLayout
+        { get => base.BackgroundImageLayout; set => base.BackgroundImageLayout = value; }
         #endregion
 
         #region Overrides
@@ -193,8 +227,6 @@ namespace ColorMesure
 
             // Create a temporary Graphics object to work on the bitmap
             Graphics bmGraphics = Graphics.FromImage(tempBitmap);
-
-            //bmGraphics.Clear(Parent.BackColor);
 
             // Set the interpolation mode
             bmGraphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
@@ -369,6 +401,35 @@ namespace ColorMesure
 
             // Refresh to reflect the changes
             zoomPopupBox.Refresh();
+        }
+
+        private int EnsureZoomBounds(int value)
+        {
+            if (value >= _minZoom && value <= _maxZoom)
+            {
+                return value;
+            }
+
+            if (_minZoom > 0)
+            {
+                value = Math.Max(_minZoom, value);
+            }
+            if (_maxZoom > 0)
+            {
+                value = Math.Min(_maxZoom, value);
+            }
+
+            return value;
+        }
+
+        private void SetZoomFactor(int value)
+        {
+            var nz = EnsureZoomBounds(value);
+            if (nz != _zoomFactor)
+            {
+                _zoomFactor = nz;
+                OnZoomFactorChanged(nz);
+            }
         }
 
         #endregion

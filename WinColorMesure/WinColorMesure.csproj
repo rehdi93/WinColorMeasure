@@ -48,7 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Constants.cs" />
+    <Compile Include="CMYK.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="InterOp\Win32.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,9 +58,16 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models.cs" />
+    <Compile Include="PixelGetter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecentColorsCollection.cs" />
+    <Compile Include="UI\ImageBoxZoom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ImageBoxZoom.Designer.cs">
+      <DependentUpon>ImageBoxZoom.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainForm.en.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -80,6 +89,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\ImageBoxZoom.resx">
+      <DependentUpon>ImageBoxZoom.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -94,11 +106,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ColorMesureLib\ColorMesureLib.csproj">
-      <Project>{c56d2b45-4941-4191-8e62-a0e5e5957870}</Project>
-      <Name>ColorMesureLib</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

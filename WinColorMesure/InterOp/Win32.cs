@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ColorMesure.InterOp
+namespace WinColorMesure.InterOp
 {
     sealed class Win32
     {

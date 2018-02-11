@@ -1,4 +1,4 @@
-﻿namespace ColorMesure.Extensions
+﻿namespace WinColorMesure.Extensions
 {
     using System.Collections.Generic;
     using System.Drawing;
@@ -18,8 +18,7 @@
                 return Color.Empty;
             }
 
-            var c = ColorTranslator.FromHtml(hex);
-            return c;
+            return ColorTranslator.FromHtml(hex);
         }
 
         public static Color ToColor(this CMYK cmyk)

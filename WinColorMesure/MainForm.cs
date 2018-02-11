@@ -9,8 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ColorMesure;
-using ColorMesure.Extensions;
+using WinColorMesure;
+using WinColorMesure.Extensions;
 
 namespace WinColorMesure
 {
@@ -24,14 +24,12 @@ namespace WinColorMesure
         ColorInfoFormat _currentInfoFormat;
         RecentColorsCollection colorHistory = new RecentColorsCollection(5);
         Bitmap _currentDesktopImg;
-        int _zoomFactor;
         Point _lastCursorPos = Point.Empty;
 
 
         public MainForm()
         {
             InitializeComponent();
-            _zoomFactor = zoomTrackBar.Value;
 
             rgbFormatMenuItem.Tag = ColorInfoFormat.RGB;
             cmykFormatMenuItem.Tag = ColorInfoFormat.CMYK;
@@ -76,37 +74,6 @@ namespace WinColorMesure
             // update fields
             UpdateCurrentColor(_pixelGetter.GetPixelColor());
         }
-
-        //string FormatColorInfoTextUI(Color color, ColorInfoFormat format)
-        //{
-        //    //StringBuilder sb = new StringBuilder();
-        //    string infoText = string.Empty;
-        //    const string sep = "\n";
-
-        //    switch (format)
-        //    {
-        //        case ColorInfoFormat.RGB:
-        //            infoText += "R: " + color.R + sep;
-        //            infoText += "G: " + color.G + sep;
-        //            infoText += "B: " + color.B;
-        //            break;
-        //        case ColorInfoFormat.CMYK:
-        //            var cmyk = CMYK.FromColor(color);
-
-        //            infoText += "C: " + cmyk.C.ToString("F3") + sep;
-        //            infoText += "M: " + cmyk.M.ToString("F3") + sep;
-        //            infoText += "Y: " + cmyk.Y.ToString("F3") + sep;
-        //            infoText += "K: " + cmyk.K.ToString("F3");
-        //            break;
-        //        case ColorInfoFormat.HEX:
-        //            infoText += "Hex: " + color.ToHexString();
-        //            break;
-        //        default:
-        //            break;
-        //    }
-
-        //    return infoText;
-        //}
 
         string FormatColorInfo(Color color, ColorInfoFormat format, bool ui)
         {
@@ -198,7 +165,7 @@ namespace WinColorMesure
                 imageBoxZoom.MaximumZoom - imageBoxZoom.MinimumZoom + 1);
             
             zoomTSComboBox.Items.AddRange(zoomRange.Select(z => "x" + z).ToArray());
-            zoomTSComboBox.SelectedItem = "x" + _zoomFactor;
+            zoomTSComboBox.SelectedItem = "x" + imageBoxZoom.ZoomFactor;
 
             zoomTSMenuItem.DropDown.RenderMode = ToolStripRenderMode.System;
 
@@ -215,16 +182,9 @@ namespace WinColorMesure
             langTSComboBox.SelectedIndexChanged += langTSComboBox_SelectedIndexChanged;
 
             historyMenuItem.DropDown.RenderMode = ToolStripRenderMode.System;
+
         }
 
-        private void ZoomTSComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var item = zoomTSComboBox.SelectedItem;
-            var value = int.Parse((item as string).Substring(1));
-
-            _zoomFactor = value;
-            zoomTrackBar.Value = value;
-        }
 
         private void ImageBoxZoom_MouseLeave(object sender, EventArgs e)
         {
@@ -307,19 +267,25 @@ namespace WinColorMesure
 
         private void zoomTrackBar_ValueChanged(object sender, EventArgs e)
         {
-            _zoomFactor = zoomTrackBar.Value;
-            zoomFactorLabel.Text = "x" + _zoomFactor;
-
-            imageBoxZoom.ZoomFactor = _zoomFactor;
+            imageBoxZoom.ZoomFactor = zoomTrackBar.Value;
         }
 
-        private void zoomToolStripMenuItem_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void ZoomTSComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var zoomItem = e.ClickedItem as ToolStripMenuItem;
-            var value = int.Parse(zoomItem.Text.Substring(1));
+            var item = zoomTSComboBox.SelectedItem;
+            var value = int.Parse((item as string).Substring(1));
 
-            _zoomFactor = value;
-            zoomTrackBar.Value = value;
+            imageBoxZoom.ZoomFactor = value;
+        }
+
+        private void imageBoxZoom_ZoomFactorChanged(object sender, int e)
+        {
+            string zoomText = "x" + e;
+
+            zoomFactorLabel.Text = zoomText;
+
+            zoomTrackBar.Value = e;
+            zoomTSComboBox.SelectedItem = zoomText;
         }
 
         private void OnSharedDropdown_Opening(object sender, EventArgs e)
@@ -340,6 +306,7 @@ namespace WinColorMesure
 
             System.Threading.Thread.CurrentThread.CurrentUICulture = culture;
         }
+
     }
 
 }

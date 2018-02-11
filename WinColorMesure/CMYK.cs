@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Globalization;
 using System.Text;
 
-namespace ColorMesure
+namespace WinColorMesure
 {
     public struct CMYK
     {
