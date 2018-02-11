@@ -22,16 +22,15 @@
             return c;
         }
 
-        public static Color FromCmyk(this CMYK cmyk)
+        public static Color ToColor(this CMYK cmyk)
         {
-            var rawRGB = new byte[]
-            {
-                (byte)(255 * (1 - cmyk.C) * (1 - cmyk.K)), // R
-                (byte)(255 * (1 - cmyk.M) * (1 - cmyk.K)), // G
-                (byte)(255 * (1 - cmyk.Y) * (1 - cmyk.K))  // B
-            };
+            return Color.FromArgb(Convert(cmyk.C), Convert(cmyk.M), Convert(cmyk.Y));
 
-            return Color.FromArgb(rawRGB[0], rawRGB[1], rawRGB[2]);
+            // ----
+            byte Convert(float v)
+            {
+                return (byte)(255 * (1 - v) * (1 - cmyk.K));
+            }
         }
     }
 }

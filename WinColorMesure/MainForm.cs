@@ -25,24 +25,13 @@ namespace WinColorMesure
         RecentColorsCollection colorHistory = new RecentColorsCollection(5);
         Bitmap _currentDesktopImg;
         int _zoomFactor;
-        Color _zoomCHColor = Color.Black;
         Point _lastCursorPos = Point.Empty;
 
-        // shared TSMenu Items
-        //ToolStripMenuItem copyColorMenuItem;
 
         public MainForm()
         {
             InitializeComponent();
             _zoomFactor = zoomTrackBar.Value;
-
-            //copyColorMenuItem = new ToolStripMenuItem()
-            //{
-            //    Text = "Copiar cor",
-            //    ShortcutKeys = (Keys)Shortcut.CtrlC
-            //};
-            //copyColorMenuItem.Click += OnCopyColorText_Click;
-
 
             rgbFormatMenuItem.Tag = ColorInfoFormat.RGB;
             cmykFormatMenuItem.Tag = ColorInfoFormat.CMYK;
@@ -61,7 +50,7 @@ namespace WinColorMesure
             pColor.BackColor = color;
             _currentColor = color;
 
-            colorInfoLabel.Text = FormatColorInfoTextUI(color, _currentInfoFormat);
+            colorInfoLabel.Text = FormatColorInfo(color, _currentInfoFormat, true);
 
         }
 
@@ -75,72 +64,96 @@ namespace WinColorMesure
             _currentDesktopImg?.Dispose();
             imageBoxZoom.Image = null;
 
-            // get new desktop bitmap, adjust size of picImage so the parent panel
-            // gives us proper scroll bars
+            // get new desktop bitmap
             var currentScr = Screen.FromControl(this);
             _currentDesktopImg = _pixelGetter.GetDesktopImage(currentScr.Bounds);
 
-            //picImage.Size = currentScr.Bounds.Size;
-            //picImage.Image = _currentDesktopImg;
             imageBoxZoom.Image = _currentDesktopImg;
 
             // re-show window
             this.Opacity = 1.0;
 
             // update fields
-            //UpdateZoomedImage(_lastCursorPos);
             UpdateCurrentColor(_pixelGetter.GetPixelColor());
         }
 
-        string FormatColorInfoTextUI(Color color, ColorInfoFormat format)
+        //string FormatColorInfoTextUI(Color color, ColorInfoFormat format)
+        //{
+        //    //StringBuilder sb = new StringBuilder();
+        //    string infoText = string.Empty;
+        //    const string sep = "\n";
+
+        //    switch (format)
+        //    {
+        //        case ColorInfoFormat.RGB:
+        //            infoText += "R: " + color.R + sep;
+        //            infoText += "G: " + color.G + sep;
+        //            infoText += "B: " + color.B;
+        //            break;
+        //        case ColorInfoFormat.CMYK:
+        //            var cmyk = CMYK.FromColor(color);
+
+        //            infoText += "C: " + cmyk.C.ToString("F3") + sep;
+        //            infoText += "M: " + cmyk.M.ToString("F3") + sep;
+        //            infoText += "Y: " + cmyk.Y.ToString("F3") + sep;
+        //            infoText += "K: " + cmyk.K.ToString("F3");
+        //            break;
+        //        case ColorInfoFormat.HEX:
+        //            infoText += "Hex: " + color.ToHexString();
+        //            break;
+        //        default:
+        //            break;
+        //    }
+
+        //    return infoText;
+        //}
+
+        string FormatColorInfo(Color color, ColorInfoFormat format, bool ui)
         {
             //StringBuilder sb = new StringBuilder();
             string infoText = string.Empty;
-            const string sep = "\n";
 
-            switch (format)
+            if (ui)
             {
-                case ColorInfoFormat.RGB:
-                    infoText += "R: " + color.R + sep;
-                    infoText += "G: " + color.G + sep;
-                    infoText += "B: " + color.B;
-                    break;
-                case ColorInfoFormat.CMYK:
-                    var cmyk = CMYK.FromColor(color);
+                switch (format)
+                {
+                    case ColorInfoFormat.RGB:
+                        infoText = $"R: {color.R}\n" +
+                                   $"G: {color.G}\n" +
+                                   $"B: {color.B}";
+                        break;
+                    case ColorInfoFormat.CMYK:
+                        var cmyk = CMYK.FromColor(color);
 
-                    infoText += "C: " + cmyk.C.ToString("F3") + sep;
-                    infoText += "M: " + cmyk.M.ToString("F3") + sep;
-                    infoText += "Y: " + cmyk.Y.ToString("F3") + sep;
-                    infoText += "K: " + cmyk.K.ToString("F3");
-                    break;
-                case ColorInfoFormat.HEX:
-                    infoText += "Hex: " + color.ToHexString();
-                    break;
-                default:
-                    break;
+                        infoText = $"C: {cmyk.C:F3}\n" +
+                                   $"M: {cmyk.M:F3}\n" +
+                                   $"Y: {cmyk.Y:F3}\n" +
+                                   $"K: {cmyk.K:F3}";
+                        break;
+                    case ColorInfoFormat.HEX:
+                        infoText += "Hex: " + color.ToHexString();
+                        break;
+                    default:
+                        break;
+                }
             }
-
-            return infoText;
-        }
-
-        string FormatColorInfo(Color color, ColorInfoFormat format)
-        {
-            string infoText = string.Empty;
-
-            switch (format)
+            else
             {
-                case ColorInfoFormat.RGB:
-                    infoText = $"{color.R} {color.G} {color.B}";
-                    break;
-                case ColorInfoFormat.CMYK:
-                    var cmyk = CMYK.FromColor(color);
-                    infoText = $"{cmyk.C:F3} {cmyk.M:F3} {cmyk.Y:F3} {cmyk.K:F3}";
-                    break;
-                case ColorInfoFormat.HEX:
-                    infoText = color.ToHexString();
-                    break;
-                default:
-                    break;
+                switch (format)
+                {
+                    case ColorInfoFormat.RGB:
+                        infoText = $"{color.R} {color.G} {color.B}";
+                        break;
+                    case ColorInfoFormat.CMYK:
+                        var cmyk = CMYK.FromColor(color);
+                        infoText = $"{cmyk.C:F3} {cmyk.M:F3} {cmyk.Y:F3} {cmyk.K:F3}";
+                        break;
+                    case ColorInfoFormat.HEX:
+                        infoText = color.ToHexString();
+                        break;
+                    default:
+                        break;
+                }
             }
 
             return infoText;
@@ -187,6 +200,8 @@ namespace WinColorMesure
             zoomTSComboBox.Items.AddRange(zoomRange.Select(z => "x" + z).ToArray());
             zoomTSComboBox.SelectedItem = "x" + _zoomFactor;
 
+            zoomTSMenuItem.DropDown.RenderMode = ToolStripRenderMode.System;
+
             // lang
             CultureInfo english = new CultureInfo("en"),
                 ptbr = new CultureInfo("pt-br");
@@ -199,6 +214,7 @@ namespace WinColorMesure
             langTSComboBox.SelectedIndex = selected;
             langTSComboBox.SelectedIndexChanged += langTSComboBox_SelectedIndexChanged;
 
+            historyMenuItem.DropDown.RenderMode = ToolStripRenderMode.System;
         }
 
         private void ZoomTSComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -230,7 +246,7 @@ namespace WinColorMesure
 
         private void OnCopyColorText_Click(object sender, EventArgs e)
         {
-            string colorText = FormatColorInfo(_currentColor, _currentInfoFormat);
+            string colorText = FormatColorInfo(_currentColor, _currentInfoFormat, false);
             Clipboard.SetText(colorText);
             colorHistory.Add(_currentColor);
         }
@@ -256,7 +272,7 @@ namespace WinColorMesure
                 else if (cmykRadioButton.Checked)
                     _currentInfoFormat = ColorInfoFormat.CMYK;
 
-                colorInfoLabel.Text = FormatColorInfoTextUI(_currentColor, _currentInfoFormat);
+                colorInfoLabel.Text = FormatColorInfo(_currentColor, _currentInfoFormat, true);
             }
         }
 
@@ -265,13 +281,8 @@ namespace WinColorMesure
             if (sender is ToolStripMenuItem ts)
             {
                 var format = (ColorInfoFormat)ts.Tag;
-                //string dropDownOf = ts.Owner.Tag as string;
-
-                //if (ts.OwnerItem == copyColorAsMenuItem)
-                //{
-                    var colorText = FormatColorInfo(_currentColor, format);
-                    Clipboard.SetText(colorText);
-                //}
+                var colorText = FormatColorInfo(_currentColor, format, false);
+                Clipboard.SetText(colorText);
 
                 colorHistory.Add(_currentColor);
             }

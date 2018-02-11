@@ -43,7 +43,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CMYK.cs" />
-    <Compile Include="ColorPresenterBase.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="ImageBoxZoom.cs">
       <SubType>UserControl</SubType>

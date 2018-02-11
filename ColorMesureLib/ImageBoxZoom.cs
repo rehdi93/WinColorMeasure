@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Drawing.Imaging;
 using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
+using System.Windows.Forms;
 
 namespace ColorMesure
 {
@@ -16,7 +11,7 @@ namespace ColorMesure
 
     public partial class ImageBoxZoom : UserControl
     {
-        private ContentAlignment _zoomPopupPos = ContentAlignment.TopLeft;
+        private ContentAlignment _zoomPopupPos = ContentAlignment.TopRight;
         private ContentAlignment _altZoomPos;
         private bool _scrollVisible;
         private int _zoomFactor = 3;
@@ -36,7 +31,7 @@ namespace ColorMesure
 
         #region Public Api
 
-        public ContentAlignment ZoomPopupPosition
+        public ContentAlignment PopupPosition
         {
             get => _zoomPopupPos;
             set
@@ -49,7 +44,7 @@ namespace ColorMesure
             }
         }
 
-        public ContentAlignment ZoomPopupAltPosition
+        public ContentAlignment PopupPositionAlt
         {
             get => _altZoomPos;
             set
@@ -81,14 +76,14 @@ namespace ColorMesure
 
         public int MinimumZoom
         {
-            get { return _minZoom; }
-            set { _minZoom = value; }
+            get => _minZoom;
+            set => _minZoom = value;
         }
 
         public int MaximumZoom
         {
-            get { return _maxZoom; }
-            set { _maxZoom = value; }
+            get => _maxZoom;
+            set => _maxZoom = value;
         }
 
         public Image Image
@@ -107,6 +102,7 @@ namespace ColorMesure
             }
         }
 
+        [Browsable(false)]
         public Image ZoomedImage
         {
             get
@@ -115,7 +111,7 @@ namespace ColorMesure
             }
         }
 
-        public int ZoomPopupSize
+        public int PopupSize
         {
             get => zoomPopupBox.Width;
             set
@@ -128,13 +124,15 @@ namespace ColorMesure
             }
         }
 
-        public bool ShowZoomPopup
+        public bool ShowPopup
         {
             get => zoomPopupBox.Visible;
             set => zoomPopupBox.Visible = value;
         }
 
         public event EventHandler<int> ZoomFactorChanged;
+
+        public event EventHandler PopupBoundsChanged;
 
         #endregion
 
@@ -221,66 +219,79 @@ namespace ColorMesure
             ZoomFactorChanged?.Invoke(this, newFactor);
         }
 
+        protected void OnPopupBoundsChanged()
+        {
+            PopupBoundsChanged?.Invoke(this, EventArgs.Empty);
+        }
+
         private void RefreshZoomBoxAlignment() => SetZoomBoxAlignment(_zoomPopupPos);
 
         private void SetZoomBoxAlignment(ContentAlignment alignment)
         {
-            Rectangle area = new Rectangle(new Point(3, 3), zoomPopupBox.Size);
-            int rbOffset = _scrollVisible ? 25 : 5;
-
-            // set positioning and anchors
-            switch (alignment)
-            {
-                case ContentAlignment.TopLeft:
-                    zoomPopupBox.Anchor = AnchorStyles.Top | AnchorStyles.Left;
-                    break;
-                case ContentAlignment.TopCenter:
-                    area.Offset(Width / 2 - area.Width / 2, 0);
-                    zoomPopupBox.Anchor = AnchorStyles.Top;
-                    break;
-                case ContentAlignment.TopRight:
-                    area.Offset(Width - area.Right - rbOffset, 0);
-                    zoomPopupBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-                    break;
-                case ContentAlignment.MiddleLeft:
-                    area.Offset(0, Height / 2 - area.Height / 2);
-                    zoomPopupBox.Anchor = AnchorStyles.Left;
-                    break;
-                case ContentAlignment.MiddleCenter:
-                    area.Offset(Width / 2 - area.Width / 2, Height / 2 - area.Height / 2);
-                    zoomPopupBox.Anchor = AnchorStyles.None;
-                    break;
-                case ContentAlignment.MiddleRight:
-                    area.Offset(Width - area.Right - rbOffset, Height / 2 - area.Height / 2);
-                    zoomPopupBox.Anchor = AnchorStyles.Right;
-                    break;
-                case ContentAlignment.BottomLeft:
-                    area.Offset(0, Height - area.Bottom - rbOffset);
-                    zoomPopupBox.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-                    break;
-                case ContentAlignment.BottomCenter:
-                    area.Offset(Width / 2 - area.Width / 2, Height - area.Bottom - rbOffset);
-                    zoomPopupBox.Anchor = AnchorStyles.Bottom;
-                    break;
-                case ContentAlignment.BottomRight:
-                    area.Offset(Width - area.Right - rbOffset, Height - area.Bottom - rbOffset);
-                    zoomPopupBox.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-                    break;
-                default:
-                    alignment = ContentAlignment.TopLeft;
-                    goto case ContentAlignment.TopLeft;
-            }
-
-            // if new alignment is the current altPos, set altPos as
-            // the old zoomPos so it goes back on the next call to this func
+            // if new alignment is the current altPos, set the
+            // altPos to the old current value
             if (_altZoomPos == alignment)
                 _altZoomPos = _zoomPopupPos;
 
             _zoomPopupPos = alignment;
 
-            Debug.Assert(_zoomPopupPos != _altZoomPos);
+            Debug.Assert(_zoomPopupPos != _altZoomPos, "zoomPos cannot equal altPos");
 
-            zoomPopupBox.Location = area.Location;
+            
+            if (!this.Created) return;
+
+            // set positioning and anchors
+            Rectangle area = new Rectangle(new Point(3, 3), zoomPopupBox.Size);
+            int rbOffset = _scrollVisible ? 25 : 5;
+            AnchorStyles anchor = AnchorStyles.Top | AnchorStyles.Left;
+
+            switch (alignment)
+            {
+                case ContentAlignment.TopLeft:
+                    //anchor = AnchorStyles.Top | AnchorStyles.Left;
+                    break;
+                case ContentAlignment.TopCenter:
+                    area.Offset(Width / 2 - area.Width / 2, 0);
+                    anchor = AnchorStyles.Top;
+                    break;
+                case ContentAlignment.TopRight:
+                    area.Offset(Width - area.Right - rbOffset, 0);
+                    anchor = AnchorStyles.Top | AnchorStyles.Right;
+                    break;
+                case ContentAlignment.MiddleLeft:
+                    area.Offset(0, Height / 2 - area.Height / 2);
+                    anchor = AnchorStyles.Left;
+                    break;
+                case ContentAlignment.MiddleCenter:
+                    area.Offset(Width / 2 - area.Width / 2, Height / 2 - area.Height / 2);
+                    anchor = AnchorStyles.None;
+                    break;
+                case ContentAlignment.MiddleRight:
+                    area.Offset(Width - area.Right - rbOffset, Height / 2 - area.Height / 2);
+                    anchor = AnchorStyles.Right;
+                    break;
+                case ContentAlignment.BottomLeft:
+                    area.Offset(0, Height - area.Bottom - rbOffset);
+                    anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+                    break;
+                case ContentAlignment.BottomCenter:
+                    area.Offset(Width / 2 - area.Width / 2, Height - area.Bottom - rbOffset);
+                    anchor = AnchorStyles.Bottom;
+                    break;
+                case ContentAlignment.BottomRight:
+                    area.Offset(Width - area.Right - rbOffset, Height - area.Bottom - rbOffset);
+                    anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+                    break;
+                default:
+                    break;
+            }
+
+            if (zoomPopupBox.Bounds != area)
+            {
+                zoomPopupBox.Bounds = area;
+                zoomPopupBox.Anchor = anchor;
+                OnPopupBoundsChanged();
+            }
         }
 
         private Bitmap CreateZoomedBitmap(Point centerPt, Size tgtSize)

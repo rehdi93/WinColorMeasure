@@ -7,13 +7,13 @@ namespace ColorMesure
 {
     public struct CMYK
     {
-        const float Cmyk_min = 0.0f,
-                    Cmyk_max = 1.0f;
-
         private float _c;
         private float _m;
         private float _y;
         private float _k;
+
+        public const float MinValue = 0.0f;
+        public const float MaxValue = 1.0f;
 
 
         private CMYK(float[] raw)
@@ -42,7 +42,7 @@ namespace ColorMesure
             get => _c;
             set
             {
-                _c = value > Cmyk_min ? Math.Min(value, Cmyk_max) : Cmyk_min;
+                _c = ValueOrMinMax(value);
             }
         }
 
@@ -51,7 +51,7 @@ namespace ColorMesure
             get => _m;
             set
             {
-                _m = value > Cmyk_min ? Math.Min(value, Cmyk_max) : Cmyk_min;
+                _m = ValueOrMinMax(value);
             }
         }
 
@@ -60,7 +60,7 @@ namespace ColorMesure
             get => _y;
             set
             {
-                _y = value > Cmyk_min ? Math.Min(value, Cmyk_max) : Cmyk_min;
+                _y = ValueOrMinMax(value);
             }
         }
 
@@ -69,9 +69,16 @@ namespace ColorMesure
             get => _k;
             set
             {
-                _k = value > Cmyk_min ? Math.Min(value, Cmyk_max) : Cmyk_min;
+                _k = ValueOrMinMax(value);
             }
         }
+
+
+        private static float ValueOrMinMax(float nValue)
+        {
+            return Math.Min(MaxValue, Math.Max(MinValue, nValue));
+        }
+
 
         public static CMYK FromRGB(byte r, byte g, byte b)
         {
@@ -90,15 +97,11 @@ namespace ColorMesure
             // extract out K [0-1]
             float k = 1 - Math.Max(r_, Math.Max(g_, b_));
 
-            float[] rawValues =
-            {
-                (1 - r_ - k) / (1 - k), // C
-                (1 - g_ - k) / (1 - k), // M
-                (1 - b_ - k) / (1 - k), // Y
-                k                       // K
-            };
+            float c = (1 - r_ - k) / (1 - k);
+            float m = (1 - g_ - k) / (1 - k);
+            float y = (1 - b_ - k) / (1 - k);
 
-            return new CMYK(rawValues);
+            return new CMYK(c, m, y, k);
         }
 
         public static CMYK FromColor(Color color)
@@ -113,8 +116,7 @@ namespace ColorMesure
                 return false;
             }
 
-            var cMYK = (CMYK)obj;
-            return Equals(cMYK);
+            return Equals((CMYK)obj);
         }
 
         public bool Equals(CMYK cmyk)
@@ -155,25 +157,7 @@ namespace ColorMesure
 
             return info;
         }
-
-        //public string ToString(string format, IFormatProvider formatProvider)
-        //{
-        //    StringBuilder sb = new StringBuilder();
-        //    string baseFmt = " [C={0}, M={1}, Y={2}, K={3}]";
-
-        //    if (format == null)
-        //    {
-        //        sb.AppendFormat(" [C={0:F3}, M={1:F3}, Y={2:F3}, K={3:F3}]", C, M, Y, K);
-        //    }
-        //    else
-        //    {
-        //        formatProvider.
-        //        var nfi = new NumberFormatInfo();
-        //        var sep = nfi.NumberDecimalSeparator;
-
-        //        sb.AppendFormat(provider, );
-        //    }
-        //}
+        
     }
 
 }
