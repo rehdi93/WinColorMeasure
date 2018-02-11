@@ -307,6 +307,10 @@ namespace WinColorMesure
             System.Threading.Thread.CurrentThread.CurrentUICulture = culture;
         }
 
+        private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new AboutBox().Show(this);
+        }
     }
 
 }

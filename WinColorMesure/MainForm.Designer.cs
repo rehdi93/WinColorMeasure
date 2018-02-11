@@ -86,8 +86,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.imageMenuItem,
-            this.sobreToolStripMenuItem,
-            this.idiomaToolStripMenuItem});
+            this.idiomaToolStripMenuItem,
+            this.sobreToolStripMenuItem});
             resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
             // 
@@ -165,6 +165,7 @@
             // 
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
             resources.ApplyResources(this.sobreToolStripMenuItem, "sobreToolStripMenuItem");
+            this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
             // 
             // idiomaToolStripMenuItem
             // 
