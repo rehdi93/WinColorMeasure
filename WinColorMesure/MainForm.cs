@@ -166,23 +166,6 @@ namespace WinColorMesure
             
             zoomTSComboBox.Items.AddRange(zoomRange.Select(z => "x" + z).ToArray());
             zoomTSComboBox.SelectedItem = "x" + imageBoxZoom.ZoomFactor;
-
-            zoomTSMenuItem.DropDown.RenderMode = ToolStripRenderMode.System;
-
-            // lang
-            CultureInfo english = new CultureInfo("en"),
-                ptbr = new CultureInfo("pt-br");
-
-            int selected = System.Threading.
-                Thread.CurrentThread.CurrentCulture.Name == ptbr.Name ? 1 : 0;
-
-            langTSComboBox.Items.Add(english);
-            langTSComboBox.Items.Add(ptbr);
-            langTSComboBox.SelectedIndex = selected;
-            langTSComboBox.SelectedIndexChanged += langTSComboBox_SelectedIndexChanged;
-
-            historyMenuItem.DropDown.RenderMode = ToolStripRenderMode.System;
-
         }
 
 
@@ -293,24 +276,12 @@ namespace WinColorMesure
             //fileToolStripMenuItem.DropDownItems.Insert(1, copyColorMenuItem);
         }
 
-        private void langTSComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // TODO: not working ATM, how to localize at runtime?
-            var culture = (CultureInfo)langTSComboBox.SelectedItem;
-            var res = new ComponentResourceManager(typeof(MainForm));
-
-            foreach (Control ctrl in Controls)
-            {
-                res.ApplyResources(ctrl, ctrl.Name, culture);
-            }
-
-            System.Threading.Thread.CurrentThread.CurrentUICulture = culture;
-        }
-
         private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new AboutBox().Show(this);
         }
+
+
     }
 
 }

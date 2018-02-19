@@ -150,6 +150,9 @@ namespace WinColorMesure.UI
             }
         }
 
+        [Category("Zoom")]
+        [DefaultValue(true)]
+        public bool UpdateOnMouseMove { get; set; } = true;
 
 
         [Category("Zoom")]
@@ -184,7 +187,8 @@ namespace WinColorMesure.UI
 
         protected override void OnMouseMove(MouseEventArgs e)
         {
-            UpdateZoomedImage(e.Location);
+            if (UpdateOnMouseMove)
+                UpdateZoomedImage(e.Location);
 
             base.OnMouseMove(e);
         }
@@ -403,28 +407,21 @@ namespace WinColorMesure.UI
             zoomPopupBox.Refresh();
         }
 
-        private int EnsureZoomBounds(int value)
-        {
-            if (value >= _minZoom && value <= _maxZoom)
-            {
-                return value;
-            }
-
-            if (_minZoom > 0)
-            {
-                value = Math.Max(_minZoom, value);
-            }
-            if (_maxZoom > 0)
-            {
-                value = Math.Min(_maxZoom, value);
-            }
-
-            return value;
-        }
-
         private void SetZoomFactor(int value)
         {
-            var nz = EnsureZoomBounds(value);
+            int nz = value;
+            
+            // ensure value is within the allowed range
+            if (_minZoom > 0)
+            {
+                nz = Math.Max(_minZoom, value);
+            }
+
+            if (_maxZoom > 0)
+            {
+                nz = Math.Min(_maxZoom, value);
+            }
+
             if (nz != _zoomFactor)
             {
                 _zoomFactor = nz;
@@ -433,15 +430,14 @@ namespace WinColorMesure.UI
         }
 
         #endregion
-
-
+        
         #region Child event handlers
 
         private void zoomPopupBox_Paint(object sender, PaintEventArgs e)
         {
             if (sender is Control pb)
             {
-                // Draw the 'Cross' cursor in the center of the picBox area
+                // Draw the 'Cross' cursor in the center of the zoom area
                 // mimic-ing the actual cursor position
                 var cross = Cursors.Cross;
                 var offset = cross.HotSpot;
@@ -482,6 +478,5 @@ namespace WinColorMesure.UI
 
         #endregion
 
-        
     }
 }

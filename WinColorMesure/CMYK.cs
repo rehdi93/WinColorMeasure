@@ -152,10 +152,7 @@ namespace WinColorMesure
 
         public override string ToString()
         {
-            string info = GetType().Name;
-            info += $" [C={C:F3}, M={M:F3}, Y={Y:F3}, K={K:F3}]";
-
-            return info;
+            return $"{GetType().Name} [C={C:F3}, M={M:F3}, Y={Y:F3}, K={K:F3}]";
         }
         
     }
