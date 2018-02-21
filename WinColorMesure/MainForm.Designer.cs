@@ -66,7 +66,9 @@
             this.zoomFactorLabel = new System.Windows.Forms.Label();
             this.rootLayout = new System.Windows.Forms.TableLayoutPanel();
             this.imageBoxZoom = new WinColorMesure.UI.ImageBoxZoom();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.menuStrip.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.infoPanel.SuspendLayout();
             this.formatGbox.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -76,129 +78,130 @@
             this.textFormatContextMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.zoomTrackBar)).BeginInit();
             this.rootLayout.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip
             // 
-            resources.ApplyResources(this.menuStrip, "menuStrip");
             this.menuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.imageMenuItem,
             this.sobreToolStripMenuItem});
+            resources.ApplyResources(this.menuStrip, "menuStrip");
             this.menuStrip.Name = "menuStrip";
             // 
             // fileToolStripMenuItem
             // 
-            resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.refreshPreviewToolStripMenuItem,
             this.copyColorTSMenuItem1,
             this.toolStripSeparator1,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
             this.fileToolStripMenuItem.DropDownOpening += new System.EventHandler(this.OnSharedDropdown_Opening);
             this.fileToolStripMenuItem.Click += new System.EventHandler(this.OnCopyColorText_Click);
             // 
             // refreshPreviewToolStripMenuItem
             // 
-            resources.ApplyResources(this.refreshPreviewToolStripMenuItem, "refreshPreviewToolStripMenuItem");
             this.refreshPreviewToolStripMenuItem.Name = "refreshPreviewToolStripMenuItem";
+            resources.ApplyResources(this.refreshPreviewToolStripMenuItem, "refreshPreviewToolStripMenuItem");
             this.refreshPreviewToolStripMenuItem.Click += new System.EventHandler(this.atualizarPreviewToolStripMenuItem_Click);
             // 
             // copyColorTSMenuItem1
             // 
-            resources.ApplyResources(this.copyColorTSMenuItem1, "copyColorTSMenuItem1");
             this.copyColorTSMenuItem1.Name = "copyColorTSMenuItem1";
+            resources.ApplyResources(this.copyColorTSMenuItem1, "copyColorTSMenuItem1");
             this.copyColorTSMenuItem1.Click += new System.EventHandler(this.OnCopyColorText_Click);
             // 
             // toolStripSeparator1
             // 
-            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             this.toolStripSeparator1.Name = "toolStripSeparator1";
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             // 
             // exitToolStripMenuItem
             // 
-            resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // imageMenuItem
             // 
-            resources.ApplyResources(this.imageMenuItem, "imageMenuItem");
             this.imageMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.historyMenuItem,
             this.zoomTSMenuItem});
             this.imageMenuItem.Name = "imageMenuItem";
+            resources.ApplyResources(this.imageMenuItem, "imageMenuItem");
             this.imageMenuItem.DropDownOpening += new System.EventHandler(this.historyMenuItem_DropDownOpening);
             // 
             // historyMenuItem
             // 
-            resources.ApplyResources(this.historyMenuItem, "historyMenuItem");
             this.historyMenuItem.Name = "historyMenuItem";
+            resources.ApplyResources(this.historyMenuItem, "historyMenuItem");
             // 
             // zoomTSMenuItem
             // 
-            resources.ApplyResources(this.zoomTSMenuItem, "zoomTSMenuItem");
             this.zoomTSMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.zoomTSComboBox,
             this.toolStripSeparator3});
             this.zoomTSMenuItem.Name = "zoomTSMenuItem";
+            resources.ApplyResources(this.zoomTSMenuItem, "zoomTSMenuItem");
             // 
             // zoomTSComboBox
             // 
-            resources.ApplyResources(this.zoomTSComboBox, "zoomTSComboBox");
             this.zoomTSComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            resources.ApplyResources(this.zoomTSComboBox, "zoomTSComboBox");
             this.zoomTSComboBox.Name = "zoomTSComboBox";
             this.zoomTSComboBox.SelectedIndexChanged += new System.EventHandler(this.ZoomTSComboBox_SelectedIndexChanged);
             // 
             // toolStripSeparator3
             // 
-            resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
             this.toolStripSeparator3.ForeColor = System.Drawing.SystemColors.Control;
             this.toolStripSeparator3.Name = "toolStripSeparator3";
+            resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
             // 
             // sobreToolStripMenuItem
             // 
-            resources.ApplyResources(this.sobreToolStripMenuItem, "sobreToolStripMenuItem");
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
+            resources.ApplyResources(this.sobreToolStripMenuItem, "sobreToolStripMenuItem");
             this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
-            resources.ApplyResources(this.statusStrip1, "statusStrip1");
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statusLabel});
+            resources.ApplyResources(this.statusStrip1, "statusStrip1");
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Items.Add(this.statusLabel);
             // 
             // statusLabel
             // 
-            resources.ApplyResources(this.statusLabel, "statusLabel");
             this.statusLabel.Name = "statusLabel";
+            resources.ApplyResources(this.statusLabel, "statusLabel");
             // 
             // infoPanel
             // 
-            resources.ApplyResources(this.infoPanel, "infoPanel");
+            this.infoPanel.Controls.Add(this.groupBox1);
             this.infoPanel.Controls.Add(this.formatGbox);
             this.infoPanel.Controls.Add(this.colorGBox);
             this.infoPanel.Controls.Add(this.atualizarPrevBtn);
-            this.infoPanel.Controls.Add(this.zoomTrackBar);
-            this.infoPanel.Controls.Add(this.zoomFactorLabel);
+            resources.ApplyResources(this.infoPanel, "infoPanel");
             this.infoPanel.Name = "infoPanel";
             // 
             // formatGbox
             // 
-            resources.ApplyResources(this.formatGbox, "formatGbox");
             this.formatGbox.Controls.Add(this.flowLayoutPanel1);
+            resources.ApplyResources(this.formatGbox, "formatGbox");
             this.formatGbox.Name = "formatGbox";
             this.formatGbox.TabStop = false;
             // 
             // flowLayoutPanel1
             // 
-            resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
             this.flowLayoutPanel1.Controls.Add(this.rgbRadioButton);
             this.flowLayoutPanel1.Controls.Add(this.cmykRadioButton);
             this.flowLayoutPanel1.Controls.Add(this.hexRadioButton);
+            resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             // 
             // rgbRadioButton
@@ -226,51 +229,50 @@
             // 
             // colorGBox
             // 
-            resources.ApplyResources(this.colorGBox, "colorGBox");
             this.colorGBox.Controls.Add(this.flowLayoutPanel2);
+            resources.ApplyResources(this.colorGBox, "colorGBox");
             this.colorGBox.Name = "colorGBox";
             this.colorGBox.TabStop = false;
             // 
             // flowLayoutPanel2
             // 
-            resources.ApplyResources(this.flowLayoutPanel2, "flowLayoutPanel2");
             this.flowLayoutPanel2.Controls.Add(this.pColor);
             this.flowLayoutPanel2.Controls.Add(this.colorInfoLabel);
+            resources.ApplyResources(this.flowLayoutPanel2, "flowLayoutPanel2");
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             // 
             // pColor
             // 
-            resources.ApplyResources(this.pColor, "pColor");
             this.pColor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pColor.ContextMenuStrip = this.colorContextMenu;
+            resources.ApplyResources(this.pColor, "pColor");
             this.pColor.Name = "pColor";
             // 
             // colorContextMenu
             // 
-            resources.ApplyResources(this.colorContextMenu, "colorContextMenu");
             this.colorContextMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.colorContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.copyColorTSMenuItem2,
             this.copyColorAsMenuItem});
             this.colorContextMenu.Name = "colorContextMenu";
             this.colorContextMenu.ShowImageMargin = false;
+            resources.ApplyResources(this.colorContextMenu, "colorContextMenu");
             this.colorContextMenu.Opening += new System.ComponentModel.CancelEventHandler(this.OnOpeningSharedMenu);
             // 
             // copyColorTSMenuItem2
             // 
-            resources.ApplyResources(this.copyColorTSMenuItem2, "copyColorTSMenuItem2");
             this.copyColorTSMenuItem2.Name = "copyColorTSMenuItem2";
+            resources.ApplyResources(this.copyColorTSMenuItem2, "copyColorTSMenuItem2");
             this.copyColorTSMenuItem2.Click += new System.EventHandler(this.OnCopyColorText_Click);
             // 
             // copyColorAsMenuItem
             // 
-            resources.ApplyResources(this.copyColorAsMenuItem, "copyColorAsMenuItem");
             this.copyColorAsMenuItem.DropDown = this.textFormatContextMenu;
             this.copyColorAsMenuItem.Name = "copyColorAsMenuItem";
+            resources.ApplyResources(this.copyColorAsMenuItem, "copyColorAsMenuItem");
             // 
             // textFormatContextMenu
             // 
-            resources.ApplyResources(this.textFormatContextMenu, "textFormatContextMenu");
             this.textFormatContextMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.textFormatContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.rgbFormatMenuItem,
@@ -279,24 +281,25 @@
             this.textFormatContextMenu.Name = "textFormatContextMenu";
             this.textFormatContextMenu.OwnerItem = this.copyColorAsMenuItem;
             this.textFormatContextMenu.ShowImageMargin = false;
+            resources.ApplyResources(this.textFormatContextMenu, "textFormatContextMenu");
             this.textFormatContextMenu.Opening += new System.ComponentModel.CancelEventHandler(this.OnOpeningSharedMenu);
             // 
             // rgbFormatMenuItem
             // 
-            resources.ApplyResources(this.rgbFormatMenuItem, "rgbFormatMenuItem");
             this.rgbFormatMenuItem.Name = "rgbFormatMenuItem";
+            resources.ApplyResources(this.rgbFormatMenuItem, "rgbFormatMenuItem");
             this.rgbFormatMenuItem.Click += new System.EventHandler(this.ColorTextFormatItems_Click);
             // 
             // cmykFormatMenuItem
             // 
-            resources.ApplyResources(this.cmykFormatMenuItem, "cmykFormatMenuItem");
             this.cmykFormatMenuItem.Name = "cmykFormatMenuItem";
+            resources.ApplyResources(this.cmykFormatMenuItem, "cmykFormatMenuItem");
             this.cmykFormatMenuItem.Click += new System.EventHandler(this.ColorTextFormatItems_Click);
             // 
             // hexFormatMenuItem
             // 
-            resources.ApplyResources(this.hexFormatMenuItem, "hexFormatMenuItem");
             this.hexFormatMenuItem.Name = "hexFormatMenuItem";
+            resources.ApplyResources(this.hexFormatMenuItem, "hexFormatMenuItem");
             this.hexFormatMenuItem.Click += new System.EventHandler(this.ColorTextFormatItems_Click);
             // 
             // colorInfoLabel
@@ -349,6 +352,14 @@
             this.imageBoxZoom.MouseLeave += new System.EventHandler(this.ImageBoxZoom_MouseLeave);
             this.imageBoxZoom.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ImageBoxZoom_MouseMove);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.zoomTrackBar);
+            this.groupBox1.Controls.Add(this.zoomFactorLabel);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.TabStop = false;
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -363,8 +374,9 @@
             this.Load += new System.EventHandler(this.Main_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.infoPanel.ResumeLayout(false);
-            this.infoPanel.PerformLayout();
             this.formatGbox.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
@@ -374,6 +386,8 @@
             this.textFormatContextMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.zoomTrackBar)).EndInit();
             this.rootLayout.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -416,6 +430,7 @@
         private System.Windows.Forms.ToolStripMenuItem copyColorTSMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem copyColorTSMenuItem2;
         private System.Windows.Forms.TableLayoutPanel rootLayout;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 

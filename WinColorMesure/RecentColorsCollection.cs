@@ -28,16 +28,6 @@ namespace WinColorMesure
         public RecentColorsCollection() : this(10)
         { }
 
-        public RecentColorsCollection(IList<Color> list, int maxElements) : this(list)
-        {
-            MaxElements = maxElements;
-
-            // remove items from end of list if count exceeds maxElements
-            for (int i = list.Count - 1; i > MaxElements; i--)
-            {
-                base.RemoveItem(i);
-            }
-        }
 
         public RecentColorsCollection(IList<Color> list) : base(list)
         {

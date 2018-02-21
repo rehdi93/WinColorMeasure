@@ -163,16 +163,6 @@ namespace WinColorMesure.UI
 
         #endregion
 
-        #region Designer hidden Stuff
-        [Browsable(false)]
-        public override Image BackgroundImage
-        { get => base.BackgroundImage; set => base.BackgroundImage = value; }
-
-        [Browsable(false)]
-        public override ImageLayout BackgroundImageLayout
-        { get => base.BackgroundImageLayout; set => base.BackgroundImageLayout = value; }
-        #endregion
-
         #region Overrides
 
         protected override void OnMouseClick(MouseEventArgs e)
@@ -476,6 +466,16 @@ namespace WinColorMesure.UI
             OnMouseLeave(e);
         }
 
+        #endregion
+
+        #region Designer hidden Stuff
+        [Browsable(false)]
+        public override Image BackgroundImage
+        { get => base.BackgroundImage; set => base.BackgroundImage = value; }
+
+        [Browsable(false)]
+        public override ImageLayout BackgroundImageLayout
+        { get => base.BackgroundImageLayout; set => base.BackgroundImageLayout = value; }
         #endregion
 
     }
