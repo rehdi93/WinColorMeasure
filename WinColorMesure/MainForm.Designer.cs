@@ -86,8 +86,7 @@
             this.menuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.imageMenuItem,
-            this.sobreToolStripMenuItem});
+            this.imageMenuItem});
             resources.ApplyResources(this.menuStrip, "menuStrip");
             this.menuStrip.Name = "menuStrip";
             // 
@@ -97,6 +96,7 @@
             this.refreshPreviewToolStripMenuItem,
             this.copyColorTSMenuItem1,
             this.toolStripSeparator1,
+            this.sobreToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");

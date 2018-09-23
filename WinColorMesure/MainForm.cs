@@ -114,7 +114,6 @@ namespace WinColorMeasure
 
         private void UpdateColorHistory()
         {
-            // clear local
             historyMenuItem.DropDownItems.Clear();
 
             // construct list of recent colors
@@ -141,6 +140,8 @@ namespace WinColorMeasure
 
                 historyMenuItem.DropDownItems.Add(menuItem);
             }
+
+            historyMenuItem.Enabled = historyMenuItem.DropDownItems.Count > 0;
         }
 
 
@@ -157,13 +158,13 @@ namespace WinColorMeasure
 
         private void ImageBoxZoom_MouseLeave(object sender, EventArgs e)
         {
-            statusLabel.Text = "Mouse pos: {OB}";
+            statusLabel.Text = string.Format(Properties.Strings.MousePos, "{OB}");
         }
 
 
         private void ImageBoxZoom_MouseMove(object sender, MouseEventArgs e)
         {
-            statusLabel.Text = "Mouse pos: " + e.Location;
+            statusLabel.Text = string.Format(Properties.Strings.MousePos, e.Location);
         }
 
         private void imageBoxZoom_Click(object sender, EventArgs e)
@@ -179,6 +180,7 @@ namespace WinColorMeasure
             string colorText = FormatColorInfo(_currentColor, _currentInfoFormat, false);
             Clipboard.SetText(colorText);
             colorHistory.Add(_currentColor);
+            statusLabel.Text = string.Format(Properties.Strings.ColorCopied, _currentInfoFormat);
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
