@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace WinColorMesure
+namespace WinColorMeasure
 {
     using static InterOp.Win32;
 

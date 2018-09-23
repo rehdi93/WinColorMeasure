@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{F3BE1F09-93F6-437F-971C-3237F0DBBE49}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WinColorMesure</RootNamespace>
-    <AssemblyName>WinColorMesure</AssemblyName>
+    <RootNamespace>WinColorMeasure</RootNamespace>
+    <AssemblyName>WinColorMeasure</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

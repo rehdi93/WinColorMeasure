@@ -3,31 +3,15 @@ using System.Drawing;
 using System.Globalization;
 using System.Text;
 
-namespace WinColorMesure
+namespace WinColorMeasure
 {
-    public struct CMYK
+    public struct CMYK : IEquatable<CMYK>
     {
-        private float _c;
-        private float _m;
-        private float _y;
-        private float _k;
+        private float _c, _m, _y, _k;
 
         public const float MinValue = 0.0f;
         public const float MaxValue = 1.0f;
 
-
-        private CMYK(float[] raw)
-        {
-            if (raw.Length != 4)
-            {
-                throw new ArgumentException("Invalid array, must have 4 elements");
-            }
-
-            _c = raw[0];
-            _m = raw[1];
-            _y = raw[2];
-            _k = raw[3];
-        }
 
         public CMYK(float c, float m, float y, float k)
         {

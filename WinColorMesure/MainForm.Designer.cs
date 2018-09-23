@@ -1,4 +1,4 @@
-﻿namespace WinColorMesure
+﻿namespace WinColorMeasure
 {
     partial class MainForm
     {
@@ -66,7 +66,7 @@
             this.colorInfoLabel = new System.Windows.Forms.Label();
             this.atualizarPrevBtn = new System.Windows.Forms.Button();
             this.rootLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.imageBoxZoom = new WinColorMesure.UI.ImageBoxZoom();
+            this.imageBoxZoom = new WinColorMeasure.UI.ImageBoxZoom();
             this.menuStrip.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.infoPanel.SuspendLayout();
@@ -100,7 +100,6 @@
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
-            this.fileToolStripMenuItem.DropDownOpening += new System.EventHandler(this.OnSharedDropdown_Opening);
             this.fileToolStripMenuItem.Click += new System.EventHandler(this.OnCopyColorText_Click);
             // 
             // refreshPreviewToolStripMenuItem
@@ -280,7 +279,7 @@
             this.colorContextMenu.Name = "colorContextMenu";
             this.colorContextMenu.ShowImageMargin = false;
             resources.ApplyResources(this.colorContextMenu, "colorContextMenu");
-            this.colorContextMenu.Opening += new System.ComponentModel.CancelEventHandler(this.OnOpeningSharedMenu);
+            this.colorContextMenu.Opening += new System.ComponentModel.CancelEventHandler(this.OnColorContextMenuOpen);
             // 
             // copyColorTSMenuItem2
             // 
@@ -305,7 +304,7 @@
             this.textFormatContextMenu.OwnerItem = this.copyColorAsMenuItem;
             this.textFormatContextMenu.ShowImageMargin = false;
             resources.ApplyResources(this.textFormatContextMenu, "textFormatContextMenu");
-            this.textFormatContextMenu.Opening += new System.ComponentModel.CancelEventHandler(this.OnOpeningSharedMenu);
+            this.textFormatContextMenu.Opening += new System.ComponentModel.CancelEventHandler(this.OnColorContextMenuOpen);
             // 
             // rgbFormatMenuItem
             // 
@@ -419,7 +418,7 @@
         private System.Windows.Forms.ToolStripMenuItem historyMenuItem;
         private System.Windows.Forms.TrackBar zoomTrackBar;
         private System.Windows.Forms.Label zoomFactorLabel;
-        private WinColorMesure.UI.ImageBoxZoom imageBoxZoom;
+        private WinColorMeasure.UI.ImageBoxZoom imageBoxZoom;
         private System.Windows.Forms.GroupBox formatGbox;
         private System.Windows.Forms.GroupBox colorGBox;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;

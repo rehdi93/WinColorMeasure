@@ -1,4 +1,4 @@
-﻿namespace WinColorMesure.Extensions
+﻿namespace WinColorMeasure.Extensions
 {
     using System.Collections.Generic;
     using System.Drawing;

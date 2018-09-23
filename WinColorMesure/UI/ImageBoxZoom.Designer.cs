@@ -1,4 +1,4 @@
-﻿namespace WinColorMesure.UI
+﻿namespace WinColorMeasure.UI
 {
     partial class ImageBoxZoom
     {

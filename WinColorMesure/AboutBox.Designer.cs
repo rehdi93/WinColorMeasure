@@ -1,4 +1,4 @@
-﻿namespace WinColorMesure
+﻿namespace WinColorMeasure
 {
     partial class AboutBox
     {

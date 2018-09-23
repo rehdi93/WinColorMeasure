@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WinColorMesure
+namespace WinColorMeasure
 {
     enum ColorInfoFormat
     {

@@ -5,9 +5,9 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using WinColorMesure.Extensions;
+using WinColorMeasure.Extensions;
 
-namespace WinColorMesure
+namespace WinColorMeasure
 {
 
     public partial class MainForm : Form
@@ -16,6 +16,7 @@ namespace WinColorMesure
         Color _currentColor;
         ColorInfoFormat _currentInfoFormat;
         RecentColorsCollection colorHistory = new RecentColorsCollection(10);
+        AboutBox aboutBox = new AboutBox();
 
 
         public MainForm()
@@ -34,7 +35,7 @@ namespace WinColorMesure
         {
             if (color == pColor.BackColor) return;
 
-            pColor.BackColor = color;
+            pColor.BackColor = 
             _currentColor = color;
 
             colorInfoLabel.Text = FormatColorInfo(color, _currentInfoFormat, true);
@@ -61,9 +62,8 @@ namespace WinColorMesure
             UpdateCurrentColor(_pixelGetter.GetPixelColor());
         }
 
-        string FormatColorInfo(Color color, ColorInfoFormat format, bool ui)
+        static string FormatColorInfo(Color color, ColorInfoFormat format, bool ui)
         {
-            //StringBuilder sb = new StringBuilder();
             string infoText = string.Empty;
 
             if (ui)
@@ -218,7 +218,7 @@ namespace WinColorMesure
             }
         }
 
-        private void OnOpeningSharedMenu(object sender, CancelEventArgs e)
+        private void OnColorContextMenuOpen(object sender, CancelEventArgs e)
         {
             if (sender is ContextMenuStrip cm)
             {
@@ -257,15 +257,10 @@ namespace WinColorMesure
             zoomTrackBar.Value = e;
             zoomTSComboBox.SelectedItem = zoomText;
         }
-
-        private void OnSharedDropdown_Opening(object sender, EventArgs e)
-        {
-            //fileToolStripMenuItem.DropDownItems.Insert(1, copyColorMenuItem);
-        }
-
+        
         private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new AboutBox().Show(this);
+            aboutBox.Show(this);
         }
 
 

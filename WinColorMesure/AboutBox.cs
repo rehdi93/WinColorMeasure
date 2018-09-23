@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WinColorMesure
+namespace WinColorMeasure
 {
     partial class AboutBox : Form
     {
