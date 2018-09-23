@@ -11,9 +11,9 @@ namespace WinColorMesure
 {
     using static InterOp.Win32;
 
-
     public class GDIPixelGetter
     {
+
         public Bitmap GetDesktopImage(Rectangle bounds)
         {
             return InternalGetDesktopImg(bounds);
@@ -46,21 +46,6 @@ namespace WinColorMesure
             return mem;
         }
 
-        byte[] GetPixelColorBytes(int x, int y)
-        {
-            var win32Color = GetWin32ColorAtPoint(x, y);
-
-            byte[] RGB =
-            {
-                (byte)(win32Color & 0x000000FF),
-                (byte)((win32Color & 0x0000FF00) >> 8),
-                (byte)((win32Color & 0x00FF0000) >> 16)
-            };
-
-            return RGB;
-        }
-
-
         private Bitmap InternalGetDesktopImg(Rectangle srcBounds)
         {
             var bitmap = new Bitmap(srcBounds.Width, srcBounds.Height, PixelFormat.Format24bppRgb);
@@ -76,15 +61,25 @@ namespace WinColorMesure
 
         private int GetWin32ColorAtPoint(int x, int y)
         {
-            //var desktop = GetDesktopWindow();
             var desktop = IntPtr.Zero;
-            IntPtr hdc = GetDC(desktop);
-            uint win32Color = GetPixel(hdc, x, y);
-            ReleaseDC(desktop, hdc);
-
-            return (int)win32Color;
+            return GetWin32ColorAtPoint(x, y, desktop);
         }
         
+        private int GetWin32ColorAtPoint(int x, int y, IntPtr handle)
+        {
+            IntPtr hdc = GetDC(handle);
+            uint win32color = GetPixel(hdc, x, y);
+            ReleaseDC(handle, hdc);
+
+            return (int)win32color;
+        }
+
+        int PhysicalToLogical(int pixel, float dpi)
+        {
+            return (int) (pixel * 96f / dpi);
+        }
+
+
     }
 
 }

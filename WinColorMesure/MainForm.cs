@@ -14,8 +14,6 @@ using WinColorMesure.Extensions;
 
 namespace WinColorMesure
 {
-    using Debug = System.Diagnostics.Debug;
-    using CultureInfo = System.Globalization.CultureInfo;
 
     public partial class MainForm : Form
     {
@@ -65,7 +63,6 @@ namespace WinColorMesure
             // get new desktop bitmap
             var currentScr = Screen.FromControl(this);
             _currentDesktopImg = _pixelGetter.GetDesktopImage(currentScr.Bounds);
-
             imageBoxZoom.Image = _currentDesktopImg;
 
             // re-show window

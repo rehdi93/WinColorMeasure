@@ -156,7 +156,7 @@
     <value>&amp;File</value>
   </data>
   <data name="historyMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 26</value>
+    <value>131, 26</value>
   </data>
   <data name="historyMenuItem.Text" xml:space="preserve">
     <value>&amp;History</value>
@@ -172,7 +172,7 @@
     <value>184, 6</value>
   </data>
   <data name="zoomTSMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 26</value>
+    <value>131, 26</value>
   </data>
   <data name="zoomTSMenuItem.Text" xml:space="preserve">
     <value>&amp;Zoom</value>
@@ -274,7 +274,7 @@
     <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;zoomTrackBar.Parent" xml:space="preserve">
-    <value>groupBox1</value>
+    <value>zoomGbox</value>
   </data>
   <data name="&gt;&gt;zoomTrackBar.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -304,33 +304,33 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;zoomFactorLabel.Parent" xml:space="preserve">
-    <value>groupBox1</value>
+    <value>zoomGbox</value>
   </data>
   <data name="&gt;&gt;zoomFactorLabel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="zoomGbox.Location" type="System.Drawing.Point, System.Drawing">
     <value>278, 70</value>
   </data>
-  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="zoomGbox.Size" type="System.Drawing.Size, System.Drawing">
     <value>233, 63</value>
   </data>
-  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+  <data name="zoomGbox.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
   </data>
-  <data name="groupBox1.Text" xml:space="preserve">
+  <data name="zoomGbox.Text" xml:space="preserve">
     <value>Zoom</value>
   </data>
-  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
-    <value>groupBox1</value>
+  <data name="&gt;&gt;zoomGbox.Name" xml:space="preserve">
+    <value>zoomGbox</value>
   </data>
-  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+  <data name="&gt;&gt;zoomGbox.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;zoomGbox.Parent" xml:space="preserve">
     <value>infoPanel</value>
   </data>
-  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;zoomGbox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="rgbRadioButton.AutoSize" type="System.Boolean, mscorlib">

@@ -37,14 +37,6 @@ namespace WinColorMesure.InterOp
         [DllImport("gdi32.dll")]
         public static extern uint GetPixel(IntPtr hdc, int nXPos, int nYPos);
 
-        /// <summary>
-        /// Returns a handle to the desktop window. The desktop window covers the entire screen, 
-        /// it's the area on top of which other windows are painted.
-        /// </summary>
-        /// <returns>HWND</returns>
-        [DllImport("user32.dll")]
-        public static extern IntPtr GetDesktopWindow();
-
         [StructLayout(LayoutKind.Sequential)]
         struct POINT
         {

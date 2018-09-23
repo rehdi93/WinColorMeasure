@@ -45,6 +45,9 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.statusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.infoPanel = new System.Windows.Forms.Panel();
+            this.zoomGbox = new System.Windows.Forms.GroupBox();
+            this.zoomTrackBar = new System.Windows.Forms.TrackBar();
+            this.zoomFactorLabel = new System.Windows.Forms.Label();
             this.formatGbox = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.rgbRadioButton = new System.Windows.Forms.RadioButton();
@@ -62,23 +65,20 @@
             this.hexFormatMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colorInfoLabel = new System.Windows.Forms.Label();
             this.atualizarPrevBtn = new System.Windows.Forms.Button();
-            this.zoomTrackBar = new System.Windows.Forms.TrackBar();
-            this.zoomFactorLabel = new System.Windows.Forms.Label();
             this.rootLayout = new System.Windows.Forms.TableLayoutPanel();
             this.imageBoxZoom = new WinColorMesure.UI.ImageBoxZoom();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.menuStrip.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.infoPanel.SuspendLayout();
+            this.zoomGbox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.zoomTrackBar)).BeginInit();
             this.formatGbox.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.colorGBox.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.colorContextMenu.SuspendLayout();
             this.textFormatContextMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.zoomTrackBar)).BeginInit();
             this.rootLayout.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -182,12 +182,35 @@
             // 
             // infoPanel
             // 
-            this.infoPanel.Controls.Add(this.groupBox1);
+            this.infoPanel.Controls.Add(this.zoomGbox);
             this.infoPanel.Controls.Add(this.formatGbox);
             this.infoPanel.Controls.Add(this.colorGBox);
             this.infoPanel.Controls.Add(this.atualizarPrevBtn);
             resources.ApplyResources(this.infoPanel, "infoPanel");
             this.infoPanel.Name = "infoPanel";
+            // 
+            // zoomGbox
+            // 
+            this.zoomGbox.Controls.Add(this.zoomTrackBar);
+            this.zoomGbox.Controls.Add(this.zoomFactorLabel);
+            resources.ApplyResources(this.zoomGbox, "zoomGbox");
+            this.zoomGbox.Name = "zoomGbox";
+            this.zoomGbox.TabStop = false;
+            // 
+            // zoomTrackBar
+            // 
+            resources.ApplyResources(this.zoomTrackBar, "zoomTrackBar");
+            this.zoomTrackBar.LargeChange = 1;
+            this.zoomTrackBar.Maximum = 6;
+            this.zoomTrackBar.Minimum = 2;
+            this.zoomTrackBar.Name = "zoomTrackBar";
+            this.zoomTrackBar.Value = 3;
+            this.zoomTrackBar.ValueChanged += new System.EventHandler(this.zoomTrackBar_ValueChanged);
+            // 
+            // zoomFactorLabel
+            // 
+            resources.ApplyResources(this.zoomFactorLabel, "zoomFactorLabel");
+            this.zoomFactorLabel.Name = "zoomFactorLabel";
             // 
             // formatGbox
             // 
@@ -314,21 +337,6 @@
             this.atualizarPrevBtn.UseVisualStyleBackColor = true;
             this.atualizarPrevBtn.Click += new System.EventHandler(this.atualizarPreviewToolStripMenuItem_Click);
             // 
-            // zoomTrackBar
-            // 
-            resources.ApplyResources(this.zoomTrackBar, "zoomTrackBar");
-            this.zoomTrackBar.LargeChange = 1;
-            this.zoomTrackBar.Maximum = 6;
-            this.zoomTrackBar.Minimum = 2;
-            this.zoomTrackBar.Name = "zoomTrackBar";
-            this.zoomTrackBar.Value = 3;
-            this.zoomTrackBar.ValueChanged += new System.EventHandler(this.zoomTrackBar_ValueChanged);
-            // 
-            // zoomFactorLabel
-            // 
-            resources.ApplyResources(this.zoomFactorLabel, "zoomFactorLabel");
-            this.zoomFactorLabel.Name = "zoomFactorLabel";
-            // 
             // rootLayout
             // 
             resources.ApplyResources(this.rootLayout, "rootLayout");
@@ -352,14 +360,6 @@
             this.imageBoxZoom.MouseLeave += new System.EventHandler(this.ImageBoxZoom_MouseLeave);
             this.imageBoxZoom.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ImageBoxZoom_MouseMove);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.zoomTrackBar);
-            this.groupBox1.Controls.Add(this.zoomFactorLabel);
-            resources.ApplyResources(this.groupBox1, "groupBox1");
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.TabStop = false;
-            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -377,6 +377,9 @@
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.infoPanel.ResumeLayout(false);
+            this.zoomGbox.ResumeLayout(false);
+            this.zoomGbox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.zoomTrackBar)).EndInit();
             this.formatGbox.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
@@ -384,10 +387,7 @@
             this.flowLayoutPanel2.ResumeLayout(false);
             this.colorContextMenu.ResumeLayout(false);
             this.textFormatContextMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.zoomTrackBar)).EndInit();
             this.rootLayout.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -430,7 +430,7 @@
         private System.Windows.Forms.ToolStripMenuItem copyColorTSMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem copyColorTSMenuItem2;
         private System.Windows.Forms.TableLayoutPanel rootLayout;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox zoomGbox;
     }
 }
 

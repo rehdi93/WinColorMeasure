@@ -361,8 +361,7 @@ namespace WinColorMesure.UI
 
         private void SetImgBoxSize(Size szImg)
         {
-            if (szImg.Width <= rootBounds.Width &&
-                szImg.Height <= rootBounds.Height)
+            if (szImg.Width <= rootBounds.Width && szImg.Height <= rootBounds.Height)
             {
                 imgBox.Dock = DockStyle.Fill;
                 imgBox.SizeMode = PictureBoxSizeMode.Normal;
