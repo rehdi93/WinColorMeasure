@@ -385,10 +385,7 @@ namespace WinColorMesure.UI
         {
             _ZoomedBitmap = CreateZoomedBitmap(cursorPos, zoomPopupBox.Size);
 
-            if (!zoomPopupBox.Visible)
-            {
-                return;
-            }
+            if (!zoomPopupBox.Visible) return;
 
             zoomPopupBox.Image = _ZoomedBitmap;
 
@@ -424,18 +421,17 @@ namespace WinColorMesure.UI
 
         private void zoomPopupBox_Paint(object sender, PaintEventArgs e)
         {
-            if (sender is Control pb)
-            {
-                // Draw the 'Cross' cursor in the center of the zoom area
-                // mimic-ing the actual cursor position
-                var cross = Cursors.Cross;
-                var offset = cross.HotSpot;
+            var pb = (Control)sender;
 
-                int cPos_x = (pb.Width / 2) - offset.X;
-                int cPos_y = (pb.Height / 2) - offset.Y;
+            // Draw the 'Cross' cursor in the center of the zoom area
+            // mimic-ing the actual cursor position
+            var cross = Cursors.Cross;
+            var offset = cross.HotSpot;
 
-                cross.Draw(e.Graphics, new Rectangle(cPos_x, cPos_y, 1, 1));
-            }
+            int cPos_x = (pb.Width / 2)  - offset.X;
+            int cPos_y = (pb.Height / 2) - offset.Y;
+
+            cross.Draw(e.Graphics, new Rectangle(cPos_x, cPos_y, 1, 1));
         }
 
         private void zoomPopupBox_MouseEnter(object sender, EventArgs e)

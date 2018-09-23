@@ -79,7 +79,10 @@ namespace WinColorMesure
             return (int) (pixel * 96f / dpi);
         }
 
-
+        int LogicalToPhysical(int pixel, float dpi)
+        {
+            return (int) (pixel * dpi / 96f);
+        }
     }
 
 }
