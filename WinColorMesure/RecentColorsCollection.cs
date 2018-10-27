@@ -42,9 +42,10 @@ namespace WinColorMeasure
 
         protected override void InsertItem(int index, Color item)
         {
-            if (Contains(item))
+            int oldIndex = IndexOf(item);
+
+            if (oldIndex != -1)
             {
-                var oldIndex = IndexOf(item);
                 Color movedItem = this[oldIndex];
 
                 base.RemoveItem(oldIndex);

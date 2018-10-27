@@ -24,37 +24,25 @@ namespace WinColorMeasure
         public float C
         {
             get => _c;
-            set
-            {
-                _c = ValueOrMinMax(value);
-            }
+            set => _c = ValueOrMinMax(value);
         }
 
         public float M
         {
             get => _m;
-            set
-            {
-                _m = ValueOrMinMax(value);
-            }
+            set => _m = ValueOrMinMax(value);
         }
 
         public float Y
         {
             get => _y;
-            set
-            {
-                _y = ValueOrMinMax(value);
-            }
+            set => _y = ValueOrMinMax(value);
         }
 
         public float K
         {
             get => _k;
-            set
-            {
-                _k = ValueOrMinMax(value);
-            }
+            set => _k = ValueOrMinMax(value);
         }
 
 
@@ -62,7 +50,6 @@ namespace WinColorMeasure
         {
             return Math.Min(MaxValue, Math.Max(MinValue, nValue));
         }
-
 
         public static CMYK FromRGB(byte r, byte g, byte b)
         {
@@ -78,14 +65,16 @@ namespace WinColorMeasure
             float g_ = g / 255f;
             float b_ = b / 255f;
 
+            CMYK ret = default(CMYK);
+
             // extract out K [0-1]
-            float k = 1 - Math.Max(r_, Math.Max(g_, b_));
+            ret.K = 1 - Math.Max(r_, Math.Max(g_, b_));
 
-            float c = (1 - r_ - k) / (1 - k);
-            float m = (1 - g_ - k) / (1 - k);
-            float y = (1 - b_ - k) / (1 - k);
+            ret.C = (1 - r_ - ret.K) / (1 - ret.K);
+            ret.M = (1 - g_ - ret.K) / (1 - ret.K);
+            ret.Y = (1 - b_ - ret.K) / (1 - ret.K);
 
-            return new CMYK(c, m, y, k);
+            return ret;
         }
 
         public static CMYK FromColor(Color color)
@@ -136,7 +125,7 @@ namespace WinColorMeasure
 
         public override string ToString()
         {
-            return $"{GetType().Name} [C={C:F3}, M={M:F3}, Y={Y:F3}, K={K:F3}]";
+            return $"[C={C:F3}, M={M:F3}, Y={Y:F3}, K={K:F3}]";
         }
         
     }
