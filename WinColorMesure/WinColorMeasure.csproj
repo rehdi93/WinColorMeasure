@@ -59,7 +59,7 @@
     </Compile>
     <Compile Include="CMYK.cs" />
     <Compile Include="Extensions.cs" />
-    <Compile Include="InterOp\Win32.cs" />
+    <Compile Include="Win32.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

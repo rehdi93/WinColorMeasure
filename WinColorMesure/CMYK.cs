@@ -24,29 +24,29 @@ namespace WinColorMeasure
         public float C
         {
             get => _c;
-            set => _c = ValueOrMinMax(value);
+            set => _c = Clamp(value);
         }
 
         public float M
         {
             get => _m;
-            set => _m = ValueOrMinMax(value);
+            set => _m = Clamp(value);
         }
 
         public float Y
         {
             get => _y;
-            set => _y = ValueOrMinMax(value);
+            set => _y = Clamp(value);
         }
 
         public float K
         {
             get => _k;
-            set => _k = ValueOrMinMax(value);
+            set => _k = Clamp(value);
         }
 
 
-        private static float ValueOrMinMax(float nValue)
+        private static float Clamp(float nValue)
         {
             return Math.Min(MaxValue, Math.Max(MinValue, nValue));
         }

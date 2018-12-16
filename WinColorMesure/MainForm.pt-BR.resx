@@ -118,56 +118,62 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 24</value>
-  </data>
-  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Arquivo</value>
-  </data>
-  <data name="imageMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 24</value>
-  </data>
-  <data name="imageMenuItem.Text" xml:space="preserve">
-    <value>&amp;Imagem</value>
-  </data>
-  <data name="sobreToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 24</value>
-  </data>
-  <data name="sobreToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Sobre</value>
-  </data>
   <data name="refreshPreviewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>222, 26</value>
+    <value>183, 22</value>
   </data>
   <data name="refreshPreviewToolStripMenuItem.Text" xml:space="preserve">
     <value>Atualizar &amp;Preview</value>
   </data>
   <data name="copyColorTSMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>222, 26</value>
+    <value>183, 22</value>
   </data>
   <data name="copyColorTSMenuItem1.Text" xml:space="preserve">
     <value>&amp;Copiar cor</value>
   </data>
+  <data name="colorDialogToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 22</value>
+  </data>
+  <data name="colorDialogToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Escolher cor</value>
+  </data>
   <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 6</value>
+    <value>180, 6</value>
+  </data>
+  <data name="sobreToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 22</value>
+  </data>
+  <data name="sobreToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Sobre</value>
   </data>
   <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>222, 26</value>
+    <value>183, 22</value>
   </data>
   <data name="exitToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Sair</value>
   </data>
+  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 20</value>
+  </data>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Arquivo</value>
+  </data>
   <data name="historyMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 26</value>
+    <value>122, 22</value>
   </data>
   <data name="historyMenuItem.Text" xml:space="preserve">
     <value>&amp;Histórico</value>
   </data>
   <data name="zoomTSMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 26</value>
+    <value>122, 22</value>
+  </data>
+  <data name="imageMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 20</value>
+  </data>
+  <data name="imageMenuItem.Text" xml:space="preserve">
+    <value>&amp;Imagem</value>
   </data>
   <data name="statusLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 20</value>
+    <value>45, 17</value>
   </data>
   <data name="statusLabel.Text" xml:space="preserve">
     <value>Status..</value>
@@ -175,26 +181,26 @@
   <data name="formatGbox.Text" xml:space="preserve">
     <value>Formato</value>
   </data>
-  <data name="colorGBox.Text" xml:space="preserve">
-    <value>Cor</value>
-  </data>
-  <data name="colorContextMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 52</value>
-  </data>
   <data name="copyColorTSMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 24</value>
+    <value>147, 22</value>
   </data>
   <data name="copyColorTSMenuItem2.Text" xml:space="preserve">
     <value>&amp;Copiar cor</value>
   </data>
   <data name="copyColorAsMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 24</value>
+    <value>147, 22</value>
   </data>
   <data name="copyColorAsMenuItem.Text" xml:space="preserve">
     <value>Copiar cor c&amp;omo...</value>
   </data>
+  <data name="colorContextMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 48</value>
+  </data>
   <data name="colorInfoLabel.Text" xml:space="preserve">
     <value>Info. Cor</value>
+  </data>
+  <data name="colorGBox.Text" xml:space="preserve">
+    <value>Cor</value>
   </data>
   <data name="atualizarPrevBtn.Text" xml:space="preserve">
     <value>Atualizar &amp;Preview</value>
@@ -2080,6 +2086,6 @@
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>Inherit</value>
+    <value>NoControl</value>
   </data>
 </root>

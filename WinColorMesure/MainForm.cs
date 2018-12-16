@@ -35,8 +35,7 @@ namespace WinColorMeasure
         {
             if (color == pColor.BackColor) return;
 
-            pColor.BackColor = 
-            _currentColor = color;
+            pColor.BackColor = _currentColor = color;
 
             colorInfoLabel.Text = FormatColorInfo(color, _currentInfoFormat, true);
         }
@@ -265,7 +264,15 @@ namespace WinColorMeasure
             aboutBox.Show(this);
         }
 
+        private void colorDialogToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            colorDialog.CustomColors = colorHistory.Select(c => ColorTranslator.ToWin32(c)).ToArray();
 
+            var result = colorDialog.ShowDialog(this);
+
+            if (result == DialogResult.OK)
+                UpdateCurrentColor(colorDialog.Color);
+        }
     }
 
 }

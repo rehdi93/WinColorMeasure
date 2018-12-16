@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
 
 namespace WinColorMeasure
 {
@@ -13,56 +8,36 @@ namespace WinColorMeasure
 
     public class GDIPixelGetter
     {
-
         public Bitmap GetDesktopImage(Rectangle bounds)
         {
-            return InternalGetDesktopImg(bounds);
-        }
-
-        public Color GetPixelColor(int x, int y)
-        {
-            var win32Color = GetWin32ColorAtPoint(x, y);
-            return ColorTranslator.FromWin32(win32Color);
-        }
-
-        public Color GetPixelColor(Point pos)
-        {
-            return GetPixelColor(pos.X, pos.Y);
-        }
-
-        public Color GetPixelColor()
-        {
-            var cursorPos = GetCursorPosition();
-            var win32Color = GetWin32ColorAtPoint(cursorPos.X, cursorPos.Y);
-            return ColorTranslator.FromWin32(win32Color);
-        }
-
-        public Stream GetDesktopImageStream(Rectangle bounds)
-        {
-            var bm = InternalGetDesktopImg(bounds);
-            var mem = new MemoryStream();
-            bm.Save(mem, ImageFormat.Bmp);
-
-            return mem;
-        }
-
-        private Bitmap InternalGetDesktopImg(Rectangle srcBounds)
-        {
-            var bitmap = new Bitmap(srcBounds.Width, srcBounds.Height, PixelFormat.Format24bppRgb);
+            var bitmap = new Bitmap(bounds.Width, bounds.Height, PixelFormat.Format24bppRgb);
 
             using (Graphics g = Graphics.FromImage(bitmap))
             {
                 g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
-                g.CopyFromScreen(srcBounds.Location, Point.Empty, srcBounds.Size);
+                g.CopyFromScreen(bounds.Location, Point.Empty, bounds.Size);
             }
 
             return bitmap;
         }
 
+        public Color GetPixelColor(Point pos)
+        {
+            var win32color = GetWin32ColorAtPoint(pos.X, pos.Y);
+            return ColorTranslator.FromWin32(win32color);
+        }
+
+        public Color GetPixelColor()
+        {
+            var cursorPos = GetCursorPosition();
+            return GetPixelColor(cursorPos);
+        }
+
+
         private int GetWin32ColorAtPoint(int x, int y)
         {
-            var desktop = IntPtr.Zero;
-            return GetWin32ColorAtPoint(x, y, desktop);
+            var desktopDC = IntPtr.Zero;
+            return GetWin32ColorAtPoint(x, y, desktopDC);
         }
         
         private int GetWin32ColorAtPoint(int x, int y, IntPtr handle)
@@ -74,15 +49,6 @@ namespace WinColorMeasure
             return (int)win32color;
         }
 
-        int PhysicalToLogical(int pixel, float dpi)
-        {
-            return (int) (pixel * 96f / dpi);
-        }
-
-        int LogicalToPhysical(int pixel, float dpi)
-        {
-            return (int) (pixel * dpi / 96f);
-        }
     }
 
 }

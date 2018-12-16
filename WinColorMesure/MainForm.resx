@@ -117,683 +117,263 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="refreshPreviewToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>F5</value>
+  <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
+    <value>toolStripSeparator3</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="refreshPreviewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="refreshPreviewToolStripMenuItem.Text" xml:space="preserve">
-    <value>Update &amp;Preview</value>
-  </data>
-  <data name="copyColorTSMenuItem1.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+C</value>
-  </data>
-  <data name="copyColorTSMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="copyColorTSMenuItem1.Text" xml:space="preserve">
-    <value>&amp;Copy color</value>
-  </data>
-  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 6</value>
-  </data>
-  <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="exitToolStripMenuItem.Text" xml:space="preserve">
-    <value>E&amp;xit</value>
-  </data>
-  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 20</value>
-  </data>
-  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;File</value>
-  </data>
-  <data name="historyMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 22</value>
-  </data>
-  <data name="historyMenuItem.Text" xml:space="preserve">
-    <value>&amp;History</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="zoomTSComboBox.MaxDropDownItems" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="zoomTSComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 150</value>
-  </data>
-  <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 6</value>
-  </data>
-  <data name="zoomTSMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 22</value>
-  </data>
-  <data name="zoomTSMenuItem.Text" xml:space="preserve">
-    <value>&amp;Zoom</value>
-  </data>
-  <data name="imageMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
-    <value />
-  </data>
-  <data name="imageMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 20</value>
-  </data>
-  <data name="imageMenuItem.Text" xml:space="preserve">
-    <value>&amp;Image</value>
-  </data>
-  <data name="sobreToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 20</value>
-  </data>
-  <data name="sobreToolStripMenuItem.Text" xml:space="preserve">
-    <value>A&amp;bout</value>
-  </data>
-  <data name="menuStrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="menuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>581, 24</value>
-  </data>
-  <data name="menuStrip.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="menuStrip.Text" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="&gt;&gt;menuStrip.Name" xml:space="preserve">
-    <value>menuStrip</value>
-  </data>
-  <data name="&gt;&gt;menuStrip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuStrip.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;menuStrip.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>132, 17</value>
-  </metadata>
-  <data name="statusLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 17</value>
-  </data>
-  <data name="statusLabel.Text" xml:space="preserve">
-    <value>Status...</value>
-  </data>
-  <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 551</value>
-  </data>
-  <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>581, 22</value>
-  </data>
-  <data name="statusStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="statusStrip1.Text" xml:space="preserve">
-    <value>statusStrip1</value>
-  </data>
-  <data name="&gt;&gt;statusStrip1.Name" xml:space="preserve">
-    <value>statusStrip1</value>
-  </data>
-  <data name="&gt;&gt;statusStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;statusStrip1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="zoomTrackBar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="zoomTrackBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 17</value>
-  </data>
-  <data name="zoomTrackBar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
   <data name="zoomTrackBar.Size" type="System.Drawing.Size, System.Drawing">
     <value>150, 45</value>
   </data>
-  <data name="zoomTrackBar.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;zoomTrackBar.Name" xml:space="preserve">
-    <value>zoomTrackBar</value>
-  </data>
-  <data name="&gt;&gt;zoomTrackBar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;zoomTrackBar.Parent" xml:space="preserve">
-    <value>zoomGbox</value>
-  </data>
-  <data name="&gt;&gt;zoomTrackBar.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="zoomFactorLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="zoomFactorLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="zoomFactorLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>157, 32</value>
-  </data>
-  <data name="zoomFactorLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="zoomFactorLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 13</value>
-  </data>
-  <data name="zoomFactorLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="zoomFactorLabel.Text" xml:space="preserve">
-    <value>x3</value>
-  </data>
-  <data name="&gt;&gt;zoomFactorLabel.Name" xml:space="preserve">
-    <value>zoomFactorLabel</value>
-  </data>
-  <data name="&gt;&gt;zoomFactorLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;zoomFactorLabel.Parent" xml:space="preserve">
-    <value>zoomGbox</value>
-  </data>
-  <data name="&gt;&gt;zoomFactorLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="zoomGbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 57</value>
-  </data>
-  <data name="zoomGbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="zoomGbox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="zoomGbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 51</value>
-  </data>
-  <data name="zoomGbox.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="zoomGbox.Text" xml:space="preserve">
-    <value>Zoom</value>
-  </data>
-  <data name="&gt;&gt;zoomGbox.Name" xml:space="preserve">
-    <value>zoomGbox</value>
-  </data>
-  <data name="&gt;&gt;zoomGbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;zoomGbox.Parent" xml:space="preserve">
-    <value>infoPanel</value>
-  </data>
-  <data name="&gt;&gt;zoomGbox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="rgbRadioButton.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="rgbRadioButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="rgbRadioButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 2</value>
-  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="rgbRadioButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
-  <data name="rgbRadioButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 17</value>
-  </data>
-  <data name="rgbRadioButton.TabIndex" type="System.Int32, mscorlib">
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="flowLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="rgbRadioButton.Text" xml:space="preserve">
-    <value>&amp;RGB</value>
-  </data>
-  <data name="&gt;&gt;rgbRadioButton.Name" xml:space="preserve">
-    <value>rgbRadioButton</value>
-  </data>
-  <data name="&gt;&gt;rgbRadioButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rgbRadioButton.Parent" xml:space="preserve">
-    <value>flowLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;rgbRadioButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="cmykRadioButton.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="cmykRadioButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="cmykRadioButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>54, 2</value>
-  </data>
-  <data name="cmykRadioButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="cmykRadioButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 17</value>
-  </data>
-  <data name="cmykRadioButton.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="cmykRadioButton.Text" xml:space="preserve">
-    <value>&amp;CMYK</value>
-  </data>
-  <data name="&gt;&gt;cmykRadioButton.Name" xml:space="preserve">
-    <value>cmykRadioButton</value>
-  </data>
-  <data name="&gt;&gt;cmykRadioButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cmykRadioButton.Parent" xml:space="preserve">
-    <value>flowLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;cmykRadioButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="hexRadioButton.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="hexRadioButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="hexRadioButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>113, 2</value>
-  </data>
-  <data name="hexRadioButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="hexRadioButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 17</value>
-  </data>
-  <data name="hexRadioButton.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="hexRadioButton.Text" xml:space="preserve">
-    <value>&amp;Hex</value>
-  </data>
-  <data name="&gt;&gt;hexRadioButton.Name" xml:space="preserve">
-    <value>hexRadioButton</value>
   </data>
   <data name="&gt;&gt;hexRadioButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;hexRadioButton.Parent" xml:space="preserve">
-    <value>flowLayoutPanel1</value>
+  <data name="&gt;&gt;statusLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;hexRadioButton.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="flowLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="flowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 15</value>
-  </data>
-  <data name="flowLayoutPanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="flowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>171, 31</value>
-  </data>
-  <data name="flowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel1.Name" xml:space="preserve">
-    <value>flowLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel1.Parent" xml:space="preserve">
-    <value>formatGbox</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="formatGbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 4</value>
-  </data>
-  <data name="formatGbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="formatGbox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="formatGbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 48</value>
-  </data>
-  <data name="formatGbox.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
-  <data name="formatGbox.Text" xml:space="preserve">
-    <value>Format</value>
-  </data>
-  <data name="&gt;&gt;formatGbox.Name" xml:space="preserve">
-    <value>formatGbox</value>
-  </data>
-  <data name="&gt;&gt;formatGbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;formatGbox.Parent" xml:space="preserve">
-    <value>infoPanel</value>
-  </data>
-  <data name="&gt;&gt;formatGbox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <metadata name="colorContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>267, 19</value>
-  </metadata>
-  <data name="copyColorTSMenuItem2.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+C</value>
-  </data>
-  <data name="copyColorTSMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 22</value>
-  </data>
-  <data name="copyColorTSMenuItem2.Text" xml:space="preserve">
-    <value>&amp;Copy color</value>
-  </data>
-  <metadata name="textFormatContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>450, 19</value>
-  </metadata>
-  <data name="rgbFormatMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 22</value>
-  </data>
-  <data name="rgbFormatMenuItem.Text" xml:space="preserve">
-    <value>&amp;RGB</value>
-  </data>
-  <data name="cmykFormatMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 22</value>
-  </data>
-  <data name="cmykFormatMenuItem.Text" xml:space="preserve">
-    <value>&amp;CMYK</value>
-  </data>
-  <data name="hexFormatMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 22</value>
-  </data>
-  <data name="hexFormatMenuItem.Text" xml:space="preserve">
-    <value>&amp;Hex</value>
-  </data>
-  <data name="textFormatContextMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 70</value>
-  </data>
-  <data name="&gt;&gt;textFormatContextMenu.Name" xml:space="preserve">
-    <value>textFormatContextMenu</value>
-  </data>
-  <data name="&gt;&gt;textFormatContextMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="copyColorAsMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 22</value>
-  </data>
-  <data name="copyColorAsMenuItem.Text" xml:space="preserve">
-    <value>Copy color &amp;as...</value>
-  </data>
-  <data name="colorContextMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 48</value>
-  </data>
-  <data name="&gt;&gt;colorContextMenu.Name" xml:space="preserve">
-    <value>colorContextMenu</value>
-  </data>
-  <data name="&gt;&gt;colorContextMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="pColor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="pColor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 82</value>
-  </data>
-  <data name="pColor.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;pColor.Name" xml:space="preserve">
-    <value>pColor</value>
-  </data>
-  <data name="&gt;&gt;pColor.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pColor.Parent" xml:space="preserve">
-    <value>flowLayoutPanel2</value>
-  </data>
-  <data name="&gt;&gt;pColor.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="colorInfoLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="colorInfoLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 5</value>
-  </data>
-  <data name="colorInfoLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 5, 3, 0</value>
-  </data>
-  <data name="colorInfoLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 80</value>
-  </data>
-  <data name="colorInfoLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="colorInfoLabel.Text" xml:space="preserve">
-    <value>Color info</value>
-  </data>
-  <data name="&gt;&gt;colorInfoLabel.Name" xml:space="preserve">
-    <value>colorInfoLabel</value>
+  <data name="historyMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
   </data>
   <data name="&gt;&gt;colorInfoLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;colorInfoLabel.Parent" xml:space="preserve">
-    <value>flowLayoutPanel2</value>
+  <data name="flowLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 91</value>
+  </data>
+  <data name="zoomTSMenuItem.Text" xml:space="preserve">
+    <value>&amp;Zoom</value>
   </data>
   <data name="&gt;&gt;colorInfoLabel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="flowLayoutPanel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="flowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 31</value>
   </data>
-  <data name="flowLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 15</value>
-  </data>
-  <data name="flowLayoutPanel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="flowLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>198, 91</value>
-  </data>
-  <data name="flowLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel2.Name" xml:space="preserve">
-    <value>flowLayoutPanel2</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel2.Parent" xml:space="preserve">
-    <value>colorGBox</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="colorGBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 2</value>
-  </data>
-  <data name="colorGBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="colorGBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="colorGBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 108</value>
-  </data>
-  <data name="colorGBox.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="colorGBox.Text" xml:space="preserve">
-    <value>Color</value>
-  </data>
-  <data name="&gt;&gt;colorGBox.Name" xml:space="preserve">
-    <value>colorGBox</value>
-  </data>
-  <data name="&gt;&gt;colorGBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;colorGBox.Parent" xml:space="preserve">
-    <value>infoPanel</value>
-  </data>
-  <data name="&gt;&gt;colorGBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="atualizarPrevBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="atualizarPrevBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="zoomFactorLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="atualizarPrevBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>388, 74</value>
-  </data>
-  <data name="atualizarPrevBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 34</value>
-  </data>
-  <data name="atualizarPrevBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="atualizarPrevBtn.Text" xml:space="preserve">
-    <value>Update &amp;Preview</value>
-  </data>
-  <data name="&gt;&gt;atualizarPrevBtn.Name" xml:space="preserve">
-    <value>atualizarPrevBtn</value>
-  </data>
-  <data name="&gt;&gt;atualizarPrevBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;atualizarPrevBtn.Parent" xml:space="preserve">
-    <value>infoPanel</value>
-  </data>
-  <data name="&gt;&gt;atualizarPrevBtn.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="infoPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="infoPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 407</value>
-  </data>
-  <data name="infoPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="infoPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>492, 114</value>
-  </data>
-  <data name="infoPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;infoPanel.Name" xml:space="preserve">
-    <value>infoPanel</value>
-  </data>
-  <data name="&gt;&gt;infoPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;infoPanel.Parent" xml:space="preserve">
-    <value>rootLayout</value>
-  </data>
-  <data name="&gt;&gt;infoPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="rootLayout.ColumnCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="imageBoxZoom.AutoScroll" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="imageBoxZoom.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="imageBoxZoom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 6</value>
-  </data>
-  <data name="imageBoxZoom.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="imageBoxZoom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>569, 397</value>
-  </data>
-  <data name="imageBoxZoom.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="&gt;&gt;imageBoxZoom.Name" xml:space="preserve">
-    <value>imageBoxZoom</value>
-  </data>
-  <data name="&gt;&gt;imageBoxZoom.Type" xml:space="preserve">
-    <value>WinColorMeasure.UI.ImageBoxZoom, WinColorMeasure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;imageBoxZoom.Parent" xml:space="preserve">
-    <value>rootLayout</value>
-  </data>
-  <data name="&gt;&gt;imageBoxZoom.ZOrder" xml:space="preserve">
+  <data name="rgbRadioButton.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="rootLayout.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="colorInfoLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;colorDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColorDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="colorInfoLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>85, 5</value>
+  </data>
+  <data name="flowLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="rootLayout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 24</value>
-  </data>
-  <data name="rootLayout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="rootLayout.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="rootLayout.RowCount" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="colorInfoLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="rootLayout.Size" type="System.Drawing.Size, System.Drawing">
     <value>581, 527</value>
   </data>
-  <data name="rootLayout.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
+  <data name="&gt;&gt;textFormatContextMenu.Name" xml:space="preserve">
+    <value>textFormatContextMenu</value>
   </data>
-  <data name="&gt;&gt;rootLayout.Name" xml:space="preserve">
-    <value>rootLayout</value>
+  <data name="zoomFactorLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>157, 32</value>
+  </data>
+  <data name="imageMenuItem.Text" xml:space="preserve">
+    <value>&amp;Image</value>
+  </data>
+  <data name="&gt;&gt;hexRadioButton.Name" xml:space="preserve">
+    <value>hexRadioButton</value>
+  </data>
+  <data name="rootLayout.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;copyColorTSMenuItem2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="colorDialogToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="&gt;&gt;sobreToolStripMenuItem.Name" xml:space="preserve">
+    <value>sobreToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;hexFormatMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="rgbRadioButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="imageBoxZoom.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="infoPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="sobreToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="colorGBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="refreshPreviewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="&gt;&gt;zoomFactorLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="zoomFactorLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="colorGBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 2</value>
   </data>
   <data name="&gt;&gt;rootLayout.Type" xml:space="preserve">
     <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;rootLayout.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="refreshPreviewToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>F5</value>
   </data>
-  <data name="&gt;&gt;rootLayout.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;hexFormatMenuItem.Name" xml:space="preserve">
+    <value>hexFormatMenuItem</value>
+  </data>
+  <data name="&gt;&gt;rgbRadioButton.Name" xml:space="preserve">
+    <value>rgbRadioButton</value>
+  </data>
+  <data name="&gt;&gt;copyColorTSMenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.Name" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="imageBoxZoom.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="flowLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 15</value>
+  </data>
+  <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 6</value>
+  </data>
+  <data name="zoomTrackBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 17</value>
+  </data>
+  <data name="textFormatContextMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 70</value>
+  </data>
+  <data name="imageBoxZoom.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;fileToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;copyColorAsMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmykRadioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="menuStrip.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="flowLayoutPanel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="formatGbox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Parent" xml:space="preserve">
+    <value>formatGbox</value>
   </data>
   <data name="rootLayout.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="imageBoxZoom" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="infoPanel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Percent,100,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>581, 573</value>
+  <data name="&gt;&gt;atualizarPrevBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textFormatContextMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;zoomTSComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pColor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="&gt;&gt;cmykRadioButton.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 6</value>
+  </data>
+  <data name="zoomGbox.Text" xml:space="preserve">
+    <value>Zoom</value>
+  </data>
+  <data name="imageBoxZoom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 6</value>
+  </data>
+  <data name="flowLayoutPanel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="zoomGbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="&gt;&gt;colorDialog.Name" xml:space="preserve">
+    <value>colorDialog</value>
+  </data>
+  <data name="flowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="cmykRadioButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;formatGbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;historyMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cmykRadioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="infoPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 407</value>
+  </data>
+  <data name="zoomTSComboBox.MaxDropDownItems" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="menuStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;imageBoxZoom.Parent" xml:space="preserve">
+    <value>rootLayout</value>
+  </data>
+  <data name="&gt;&gt;colorGBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="statusStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;exitToolStripMenuItem.Name" xml:space="preserve">
+    <value>exitToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Name" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2674,118 +2254,562 @@
         gva0sgaqG6MAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>500, 349</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>WinColorMesure</value>
-  </data>
-  <data name="&gt;&gt;fileToolStripMenuItem.Name" xml:space="preserve">
-    <value>fileToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;fileToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;refreshPreviewToolStripMenuItem.Name" xml:space="preserve">
-    <value>refreshPreviewToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;refreshPreviewToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;copyColorTSMenuItem1.Name" xml:space="preserve">
-    <value>copyColorTSMenuItem1</value>
-  </data>
-  <data name="&gt;&gt;copyColorTSMenuItem1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
-    <value>toolStripSeparator1</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;exitToolStripMenuItem.Name" xml:space="preserve">
-    <value>exitToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;exitToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="zoomTrackBar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="&gt;&gt;imageMenuItem.Name" xml:space="preserve">
     <value>imageMenuItem</value>
   </data>
-  <data name="&gt;&gt;imageMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;statusStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;historyMenuItem.Name" xml:space="preserve">
-    <value>historyMenuItem</value>
+  <data name="&gt;&gt;zoomTrackBar.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;historyMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="rgbRadioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 2</value>
   </data>
-  <data name="&gt;&gt;zoomTSMenuItem.Name" xml:space="preserve">
-    <value>zoomTSMenuItem</value>
+  <data name="rootLayout.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
   </data>
-  <data name="&gt;&gt;zoomTSMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;hexRadioButton.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
   </data>
-  <data name="&gt;&gt;zoomTSComboBox.Name" xml:space="preserve">
-    <value>zoomTSComboBox</value>
+  <data name="zoomFactorLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;zoomTSComboBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="statusStrip1.Text" xml:space="preserve">
+    <value>statusStrip1</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
-    <value>toolStripSeparator3</value>
+  <data name="colorGBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 108</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="rgbRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 17</value>
   </data>
-  <data name="&gt;&gt;sobreToolStripMenuItem.Name" xml:space="preserve">
-    <value>sobreToolStripMenuItem</value>
+  <data name="atualizarPrevBtn.Text" xml:space="preserve">
+    <value>Update &amp;Preview</value>
+  </data>
+  <data name="flowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 15</value>
+  </data>
+  <data name="&gt;&gt;zoomFactorLabel.Parent" xml:space="preserve">
+    <value>zoomGbox</value>
   </data>
   <data name="&gt;&gt;sobreToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;statusLabel.Name" xml:space="preserve">
-    <value>statusLabel</value>
+  <data name="&gt;&gt;infoPanel.Parent" xml:space="preserve">
+    <value>rootLayout</value>
   </data>
-  <data name="&gt;&gt;statusLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;formatGbox.Name" xml:space="preserve">
+    <value>formatGbox</value>
   </data>
-  <data name="&gt;&gt;copyColorTSMenuItem2.Name" xml:space="preserve">
-    <value>copyColorTSMenuItem2</value>
-  </data>
-  <data name="&gt;&gt;copyColorTSMenuItem2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;copyColorAsMenuItem.Name" xml:space="preserve">
-    <value>copyColorAsMenuItem</value>
-  </data>
-  <data name="&gt;&gt;copyColorAsMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rgbFormatMenuItem.Name" xml:space="preserve">
-    <value>rgbFormatMenuItem</value>
-  </data>
-  <data name="&gt;&gt;rgbFormatMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cmykFormatMenuItem.Name" xml:space="preserve">
-    <value>cmykFormatMenuItem</value>
-  </data>
-  <data name="&gt;&gt;cmykFormatMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;hexFormatMenuItem.Name" xml:space="preserve">
-    <value>hexFormatMenuItem</value>
-  </data>
-  <data name="&gt;&gt;hexFormatMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;zoomTrackBar.Name" xml:space="preserve">
+    <value>zoomTrackBar</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>
   </data>
+  <data name="hexRadioButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>581, 573</value>
+  </data>
+  <data name="cmykRadioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>54, 2</value>
+  </data>
+  <data name="cmykFormatMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 22</value>
+  </data>
+  <data name="exitToolStripMenuItem.Text" xml:space="preserve">
+    <value>E&amp;xit</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="colorInfoLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 0</value>
+  </data>
+  <data name="hexFormatMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 22</value>
+  </data>
+  <data name="&gt;&gt;fileToolStripMenuItem.Name" xml:space="preserve">
+    <value>fileToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;zoomTSMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;imageBoxZoom.Name" xml:space="preserve">
+    <value>imageBoxZoom</value>
+  </data>
+  <data name="&gt;&gt;colorInfoLabel.Name" xml:space="preserve">
+    <value>colorInfoLabel</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;atualizarPrevBtn.Name" xml:space="preserve">
+    <value>atualizarPrevBtn</value>
+  </data>
+  <data name="colorContextMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 48</value>
+  </data>
+  <data name="atualizarPrevBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 34</value>
+  </data>
+  <data name="&gt;&gt;hexRadioButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;zoomTSMenuItem.Name" xml:space="preserve">
+    <value>zoomTSMenuItem</value>
+  </data>
+  <data name="zoomTrackBar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="imageMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 20</value>
+  </data>
+  <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 551</value>
+  </data>
+  <data name="cmykRadioButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="zoomTSComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 150</value>
+  </data>
+  <data name="rootLayout.RowCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;zoomGbox.Parent" xml:space="preserve">
+    <value>infoPanel</value>
+  </data>
+  <data name="hexRadioButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;imageBoxZoom.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;colorContextMenu.Name" xml:space="preserve">
+    <value>colorContextMenu</value>
+  </data>
+  <data name="refreshPreviewToolStripMenuItem.Text" xml:space="preserve">
+    <value>Update &amp;Preview</value>
+  </data>
+  <data name="&gt;&gt;zoomTSComboBox.Name" xml:space="preserve">
+    <value>zoomTSComboBox</value>
+  </data>
+  <data name="&gt;&gt;exitToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="zoomTrackBar.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;zoomGbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="copyColorTSMenuItem2.Text" xml:space="preserve">
+    <value>&amp;Copy color</value>
+  </data>
+  <data name="&gt;&gt;colorGBox.Parent" xml:space="preserve">
+    <value>infoPanel</value>
+  </data>
+  <data name="&gt;&gt;rgbRadioButton.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="copyColorTSMenuItem2.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+C</value>
+  </data>
+  <data name="hexRadioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cmykFormatMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="copyColorTSMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
+  </data>
+  <data name="&gt;&gt;formatGbox.Parent" xml:space="preserve">
+    <value>infoPanel</value>
+  </data>
+  <data name="zoomGbox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="&gt;&gt;rgbRadioButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="copyColorAsMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel2.Name" xml:space="preserve">
+    <value>flowLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;copyColorTSMenuItem2.Name" xml:space="preserve">
+    <value>copyColorTSMenuItem2</value>
+  </data>
+  <data name="formatGbox.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>WinColorMesure</value>
+  </data>
+  <data name="formatGbox.Text" xml:space="preserve">
+    <value>Format</value>
+  </data>
+  <data name="cmykFormatMenuItem.Text" xml:space="preserve">
+    <value>&amp;CMYK</value>
+  </data>
+  <data name="&gt;&gt;colorContextMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rootLayout.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Name" xml:space="preserve">
+    <value>menuStrip</value>
+  </data>
+  <data name="&gt;&gt;statusLabel.Name" xml:space="preserve">
+    <value>statusLabel</value>
+  </data>
+  <data name="&gt;&gt;atualizarPrevBtn.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="colorInfoLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 80</value>
+  </data>
+  <data name="statusLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 17</value>
+  </data>
+  <data name="&gt;&gt;rgbFormatMenuItem.Name" xml:space="preserve">
+    <value>rgbFormatMenuItem</value>
+  </data>
+  <data name="&gt;&gt;colorInfoLabel.Parent" xml:space="preserve">
+    <value>flowLayoutPanel2</value>
+  </data>
+  <data name="zoomFactorLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;colorGBox.Name" xml:space="preserve">
+    <value>colorGBox</value>
+  </data>
+  <data name="&gt;&gt;pColor.Parent" xml:space="preserve">
+    <value>flowLayoutPanel2</value>
+  </data>
+  <data name="zoomGbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>175, 51</value>
+  </data>
+  <data name="&gt;&gt;zoomTrackBar.Parent" xml:space="preserve">
+    <value>zoomGbox</value>
+  </data>
+  <data name="&gt;&gt;imageMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="rgbRadioButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;cmykRadioButton.Name" xml:space="preserve">
+    <value>cmykRadioButton</value>
+  </data>
+  <data name="&gt;&gt;copyColorTSMenuItem1.Name" xml:space="preserve">
+    <value>copyColorTSMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;infoPanel.Name" xml:space="preserve">
+    <value>infoPanel</value>
+  </data>
+  <data name="infoPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;File</value>
+  </data>
+  <data name="imageBoxZoom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>569, 397</value>
+  </data>
+  <data name="&gt;&gt;refreshPreviewToolStripMenuItem.Name" xml:space="preserve">
+    <value>refreshPreviewToolStripMenuItem</value>
+  </data>
+  <data name="copyColorTSMenuItem1.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+C</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="rgbRadioButton.Text" xml:space="preserve">
+    <value>&amp;RGB</value>
+  </data>
+  <data name="&gt;&gt;pColor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="imageBoxZoom.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="zoomGbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>208, 57</value>
+  </data>
+  <data name="formatGbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>175, 48</value>
+  </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="cmykRadioButton.Text" xml:space="preserve">
+    <value>&amp;CMYK</value>
+  </data>
+  <data name="hexRadioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>113, 2</value>
+  </data>
+  <data name="&gt;&gt;cmykFormatMenuItem.Name" xml:space="preserve">
+    <value>cmykFormatMenuItem</value>
+  </data>
+  <data name="zoomFactorLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 13</value>
+  </data>
+  <data name="&gt;&gt;zoomGbox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="rgbFormatMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 22</value>
+  </data>
+  <data name="infoPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>492, 114</value>
+  </data>
+  <data name="menuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>581, 24</value>
+  </data>
+  <data name="rootLayout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 24</value>
+  </data>
+  <data name="historyMenuItem.Text" xml:space="preserve">
+    <value>&amp;History</value>
+  </data>
+  <data name="&gt;&gt;rgbRadioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel2.Parent" xml:space="preserve">
+    <value>colorGBox</value>
+  </data>
+  <data name="&gt;&gt;historyMenuItem.Name" xml:space="preserve">
+    <value>historyMenuItem</value>
+  </data>
+  <data name="cmykRadioButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="&gt;&gt;zoomTrackBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmykRadioButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="hexRadioButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>581, 22</value>
+  </data>
+  <data name="zoomTSMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="atualizarPrevBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="copyColorAsMenuItem.Text" xml:space="preserve">
+    <value>Copy color &amp;as...</value>
+  </data>
+  <data name="&gt;&gt;pColor.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;colorDialogToolStripMenuItem.Name" xml:space="preserve">
+    <value>colorDialogToolStripMenuItem</value>
+  </data>
+  <data name="pColor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 82</value>
+  </data>
+  <data name="hexFormatMenuItem.Text" xml:space="preserve">
+    <value>&amp;Hex</value>
+  </data>
+  <data name="copyColorTSMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="&gt;&gt;pColor.Name" xml:space="preserve">
+    <value>pColor</value>
+  </data>
+  <data name="cmykRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 17</value>
+  </data>
+  <data name="&gt;&gt;formatGbox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
+  </data>
+  <data name="imageMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;rootLayout.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="menuStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="rootLayout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="statusLabel.Text" xml:space="preserve">
+    <value>Status...</value>
+  </data>
+  <data name="hexRadioButton.Text" xml:space="preserve">
+    <value>&amp;Hex</value>
+  </data>
+  <data name="&gt;&gt;rgbFormatMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="atualizarPrevBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;infoPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pColor.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="atualizarPrevBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="copyColorTSMenuItem1.Text" xml:space="preserve">
+    <value>&amp;Copy color</value>
+  </data>
+  <data name="zoomFactorLabel.Text" xml:space="preserve">
+    <value>x3</value>
+  </data>
+  <data name="formatGbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="formatGbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>208, 4</value>
+  </data>
+  <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="&gt;&gt;colorGBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;zoomGbox.Name" xml:space="preserve">
+    <value>zoomGbox</value>
+  </data>
+  <data name="colorGBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="hexRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 17</value>
+  </data>
+  <data name="rootLayout.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="atualizarPrevBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>388, 74</value>
+  </data>
+  <data name="&gt;&gt;colorDialogToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="sobreToolStripMenuItem.Text" xml:space="preserve">
+    <value>A&amp;bout</value>
+  </data>
+  <data name="colorDialogToolStripMenuItem.Text" xml:space="preserve">
+    <value>P&amp;ick color</value>
+  </data>
+  <data name="&gt;&gt;copyColorAsMenuItem.Name" xml:space="preserve">
+    <value>copyColorAsMenuItem</value>
+  </data>
+  <data name="infoPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="colorGBox.Text" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="zoomGbox.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;imageBoxZoom.Type" xml:space="preserve">
+    <value>WinColorMeasure.UI.ImageBoxZoom, WinColorMeasure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;infoPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="colorInfoLabel.Text" xml:space="preserve">
+    <value>Color info</value>
+  </data>
+  <data name="flowLayoutPanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="&gt;&gt;refreshPreviewToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;atualizarPrevBtn.Parent" xml:space="preserve">
+    <value>infoPanel</value>
+  </data>
+  <data name="&gt;&gt;rootLayout.Name" xml:space="preserve">
+    <value>rootLayout</value>
+  </data>
+  <data name="&gt;&gt;zoomFactorLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 20</value>
+  </data>
+  <data name="rgbFormatMenuItem.Text" xml:space="preserve">
+    <value>&amp;RGB</value>
+  </data>
+  <data name="rootLayout.ColumnCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;zoomFactorLabel.Name" xml:space="preserve">
+    <value>zoomFactorLabel</value>
+  </data>
+  <data name="colorGBox.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>500, 349</value>
+  </data>
+  <metadata name="colorDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>630, 24</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="textFormatContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>450, 19</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>pt-BR</value>
+  </metadata>
+  <metadata name="colorContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>267, 19</value>
+  </metadata>
+  <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>132, 17</value>
+  </metadata>
+  <metadata name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

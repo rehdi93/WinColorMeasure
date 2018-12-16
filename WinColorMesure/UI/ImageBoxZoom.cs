@@ -40,7 +40,6 @@ namespace WinColorMeasure.UI
             {
                 if (value != _zoomPopupPos)
                 {
-                    //_zoomPopupPos = value;
                     SetZoomBoxAlignment(value);
                 }
             }
@@ -186,7 +185,6 @@ namespace WinColorMeasure.UI
         protected override void OnCreateControl()
         {
             RefreshZoomBoxAlignment();
-
             base.OnCreateControl();
         }
 
@@ -425,13 +423,12 @@ namespace WinColorMeasure.UI
 
             // Draw the 'Cross' cursor in the center of the zoom area
             // mimic-ing the actual cursor position
-            var cross = Cursors.Cross;
-            var offset = cross.HotSpot;
+            var offset = Cursors.Cross.HotSpot;
 
             int cPos_x = (pb.Width / 2)  - offset.X;
             int cPos_y = (pb.Height / 2) - offset.Y;
 
-            cross.Draw(e.Graphics, new Rectangle(cPos_x, cPos_y, 1, 1));
+            Cursors.Cross.Draw(e.Graphics, new Rectangle(cPos_x, cPos_y, 1, 1));
         }
 
         private void zoomPopupBox_MouseEnter(object sender, EventArgs e)
