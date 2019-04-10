@@ -16,7 +16,6 @@ namespace WinColorMeasure
         Bitmap currentBitmap;
         ColorInfoFormat _currentInfoFormat;
         Queue<Color> colorHistory = new Queue<Color>(10);
-        AboutBox aboutBox = new AboutBox();
 
 
         public MainForm()
@@ -280,6 +279,7 @@ namespace WinColorMeasure
         
         private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            var aboutBox = new AboutBox();
             aboutBox.Show(this);
         }
 
