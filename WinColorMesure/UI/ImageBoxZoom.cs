@@ -190,9 +190,26 @@ namespace WinColorMeasure.UI
 
         protected override void OnResize(EventArgs e)
         {
-            // keep zoombox aligned
-            RefreshZoomBoxAlignment();
             base.OnResize(e);
+            RefreshZoomBoxAlignment();
+        }
+
+        protected override void OnScroll(ScrollEventArgs se)
+        {
+            base.OnScroll(se);
+
+            if (se.Type == ScrollEventType.ThumbTrack) {
+                zoomPopupBox.Hide();
+            } else {
+                zoomPopupBox.Show();
+                RefreshZoomBoxAlignment();
+            }
+        }
+
+        protected override void OnMouseWheel(MouseEventArgs e)
+        {
+            base.OnMouseWheel(e);
+            RefreshZoomBoxAlignment();
         }
 
         #endregion
@@ -434,6 +451,8 @@ namespace WinColorMeasure.UI
             if (!DesignMode)
                 SetZoomBoxAlignment(_altZoomPos);
         }
+
+
 
         private void imgBox_MouseDown(object sender, MouseEventArgs e)
         {

@@ -143,10 +143,7 @@ namespace WinColorMeasure
             foreach (var c in colorHistory)
             {
                 Bitmap bm = new Bitmap(40, 40);
-                using (Graphics g = Graphics.FromImage(bm))
-                {
-                    g.Clear(c);
-                }
+                using (var g = Graphics.FromImage(bm)) { g.Clear(c); }
 
                 var menuItem = new ToolStripMenuItem
                 {
