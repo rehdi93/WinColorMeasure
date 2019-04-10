@@ -78,7 +78,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Strings.resx</DependentUpon>
     </Compile>
-    <Compile Include="RecentColorsCollection.cs" />
     <Compile Include="UI\ImageBoxZoom.cs">
       <SubType>UserControl</SubType>
     </Compile>

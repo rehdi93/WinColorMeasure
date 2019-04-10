@@ -15,7 +15,7 @@ namespace WinColorMeasure
         Color _currentColor;
         Bitmap currentBitmap;
         ColorInfoFormat _currentInfoFormat;
-        RecentColorsCollection colorHistory = new RecentColorsCollection(10);
+        Queue<Color> colorHistory = new Queue<Color>(10);
         AboutBox aboutBox = new AboutBox();
 
 
@@ -167,6 +167,15 @@ namespace WinColorMeasure
             historyMenuItem.Enabled = historyMenuItem.DropDownItems.Count > 0;
         }
 
+        void AddRecent(Color color)
+        {
+            if (colorHistory.Count == 10)
+            {
+                colorHistory.Dequeue();
+            }
+
+            colorHistory.Enqueue(color);
+        }
 
         protected override void OnLoad(EventArgs e)
         {
@@ -195,7 +204,7 @@ namespace WinColorMeasure
             var color = GetPixel();
             
             UpdateCurrentColor(color);
-            colorHistory.Add(color);
+            AddRecent(color);
         }
 
 
@@ -203,7 +212,6 @@ namespace WinColorMeasure
         {
             string colorText = FormatColorInfo(_currentColor, _currentInfoFormat, false);
             Clipboard.SetText(colorText);
-            colorHistory.Add(_currentColor);
             statusLabel.Text = string.Format(Properties.Strings.ColorCopied, _currentInfoFormat);
         }
 
@@ -236,8 +244,6 @@ namespace WinColorMeasure
                 var format = (ColorInfoFormat)ts.Tag;
                 var colorText = FormatColorInfo(_currentColor, format, false);
                 Clipboard.SetText(colorText);
-
-                colorHistory.Add(_currentColor);
             }
         }
 
