@@ -2444,7 +2444,7 @@
     <value>24</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>WinColorMesure</value>
+    <value>WinColorMeasure</value>
   </data>
   <data name="cmykFormatMenuItem.Text" xml:space="preserve">
     <value>&amp;CMYK</value>

@@ -89,7 +89,7 @@ namespace WinColorMeasure
 
         private void linkWebsite_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/rehdi93/WinColorMesure");
+            System.Diagnostics.Process.Start("https://github.com/rehdi93/WinColorMeasure");
         }
     }
 }
