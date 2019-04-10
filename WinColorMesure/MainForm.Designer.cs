@@ -288,7 +288,6 @@
             this.copyColorAsMenuItem});
             this.colorContextMenu.Name = "colorContextMenu";
             this.colorContextMenu.ShowImageMargin = false;
-            this.colorContextMenu.Opening += new System.ComponentModel.CancelEventHandler(this.OnColorContextMenuOpen);
             // 
             // copyColorTSMenuItem2
             // 
@@ -313,7 +312,6 @@
             this.textFormatContextMenu.Name = "textFormatContextMenu";
             this.textFormatContextMenu.OwnerItem = this.copyColorAsMenuItem;
             this.textFormatContextMenu.ShowImageMargin = false;
-            this.textFormatContextMenu.Opening += new System.ComponentModel.CancelEventHandler(this.OnColorContextMenuOpen);
             // 
             // rgbFormatMenuItem
             // 
@@ -364,7 +362,7 @@
             this.imageBoxZoom.PopupPositionAlt = System.Drawing.ContentAlignment.BottomRight;
             this.imageBoxZoom.PopupSize = 200;
             this.imageBoxZoom.ZoomFactorChanged += new System.EventHandler<int>(this.imageBoxZoom_ZoomFactorChanged);
-            this.imageBoxZoom.Click += new System.EventHandler(this.imageBoxZoom_Click);
+            this.imageBoxZoom.MouseClick += new System.Windows.Forms.MouseEventHandler(this.imageBoxZoom_MouseClick);
             this.imageBoxZoom.MouseLeave += new System.EventHandler(this.ImageBoxZoom_MouseLeave);
             this.imageBoxZoom.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ImageBoxZoom_MouseMove);
             // 

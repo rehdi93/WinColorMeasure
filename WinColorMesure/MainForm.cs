@@ -48,10 +48,11 @@ namespace WinColorMeasure
         Color GetPixel()
         {
             var mpos = imageBoxZoom.PointToClient(MousePosition);
+            var scrollPos = imageBoxZoom.AutoScrollPosition;
 
             // offset scroll position
-            mpos.X -= imageBoxZoom.AutoScrollPosition.X;
-            mpos.Y -= imageBoxZoom.AutoScrollPosition.Y;
+            mpos.X -= scrollPos.X;
+            mpos.Y -= scrollPos.Y;
 
             var color = currentBitmap.GetPixel(mpos.X, mpos.Y);
             return color;
@@ -196,12 +197,17 @@ namespace WinColorMeasure
             statusLabel.Text = string.Format(Properties.Strings.MousePos, e.Location);
         }
 
-        private void imageBoxZoom_Click(object sender, EventArgs e)
+        private void imageBoxZoom_MouseClick(object sender, MouseEventArgs e)
         {
-            var color = GetPixel();
-            
-            UpdateCurrentColor(color);
-            AddRecent(color);
+            switch (e.Button)
+            {
+                case MouseButtons.Left:
+                case MouseButtons.Right:
+                    var color = GetPixel();
+                    UpdateCurrentColor(color);
+                    AddRecent(color);
+                    break;
+            }
         }
 
 
@@ -241,18 +247,6 @@ namespace WinColorMeasure
                 var format = (ColorInfoFormat)ts.Tag;
                 var colorText = FormatColorInfo(_currentColor, format, false);
                 Clipboard.SetText(colorText);
-            }
-        }
-
-        private void OnColorContextMenuOpen(object sender, CancelEventArgs e)
-        {
-            if (sender is ContextMenuStrip cm)
-            {
-                if (cm == colorContextMenu)
-                {
-                    var color = GetPixel();
-                    UpdateCurrentColor(color);
-                }
             }
         }
 
@@ -298,6 +292,7 @@ namespace WinColorMeasure
             if (result == DialogResult.OK)
                 UpdateCurrentColor(colorDialog.Color);
         }
+
     }
 
 }
