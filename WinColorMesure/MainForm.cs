@@ -12,8 +12,8 @@ namespace WinColorMeasure
 
     public partial class MainForm : Form
     {
-        GDIPixelGetter _pixelGetter = new GDIPixelGetter();
         Color _currentColor;
+        Bitmap currentBitmap;
         ColorInfoFormat _currentInfoFormat;
         RecentColorsCollection colorHistory = new RecentColorsCollection(10);
         AboutBox aboutBox = new AboutBox();
@@ -31,12 +31,37 @@ namespace WinColorMeasure
         }
         
 
+        Bitmap GetDesktopImage(Rectangle bounds)
+        {
+            var bm = new Bitmap(bounds.Width, bounds.Height, System.Drawing.Imaging.PixelFormat.Format24bppRgb);
+
+            using (var g = Graphics.FromImage(bm))
+            {
+                g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+                g.CopyFromScreen(bounds.Location, Point.Empty, bounds.Size);
+            }
+
+            return bm;
+        }
+        Bitmap GetDesktopImage() => GetDesktopImage(SystemInformation.VirtualScreen);
+
+        Color GetPixel()
+        {
+            var mpos = imageBoxZoom.PointToClient(MousePosition);
+
+            // offset scroll position
+            mpos.X -= imageBoxZoom.AutoScrollPosition.X;
+            mpos.Y -= imageBoxZoom.AutoScrollPosition.Y;
+
+            var color = currentBitmap.GetPixel(mpos.X, mpos.Y);
+            return color;
+        }
+
         void UpdateCurrentColor(Color color)
         {
             if (color == pColor.BackColor) return;
 
             pColor.BackColor = _currentColor = color;
-
             colorInfoLabel.Text = FormatColorInfo(color, _currentInfoFormat, true);
         }
 
@@ -49,16 +74,15 @@ namespace WinColorMeasure
             // Dispose current desktop bitmap
             imageBoxZoom.Image?.Dispose();
 
-            var bounds = SystemInformation.VirtualScreen;
-
             // get new desktop bitmap
-            imageBoxZoom.Image = _pixelGetter.GetDesktopImage(bounds);
+            imageBoxZoom.Image = currentBitmap = GetDesktopImage();
 
             // re-show window
             this.Opacity = 1.0;
 
             // update fields
-            UpdateCurrentColor(_pixelGetter.GetPixelColor());
+            var color = GetPixel();
+            UpdateCurrentColor(color);
         }
 
         static string FormatColorInfo(Color color, ColorInfoFormat format, bool ui)
@@ -168,7 +192,8 @@ namespace WinColorMeasure
 
         private void imageBoxZoom_Click(object sender, EventArgs e)
         {
-            var color = _pixelGetter.GetPixelColor(MousePosition);
+            var color = GetPixel();
+            
             UpdateCurrentColor(color);
             colorHistory.Add(color);
         }
@@ -182,10 +207,7 @@ namespace WinColorMeasure
             statusLabel.Text = string.Format(Properties.Strings.ColorCopied, _currentInfoFormat);
         }
 
-        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e) { Close(); }
 
         private void atualizarPreviewToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -225,7 +247,7 @@ namespace WinColorMeasure
             {
                 if (cm == colorContextMenu)
                 {
-                    var color = _pixelGetter.GetPixelColor();
+                    var color = GetPixel();
                     UpdateCurrentColor(color);
                 }
             }

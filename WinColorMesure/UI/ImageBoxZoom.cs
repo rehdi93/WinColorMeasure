@@ -190,11 +190,8 @@ namespace WinColorMeasure.UI
 
         protected override void OnResize(EventArgs e)
         {
-            // stops the ZoomBox beeing sometimes missaligned
-            // in the designer
-            if (DesignMode)
-                RefreshZoomBoxAlignment();
-
+            // keep zoombox aligned
+            RefreshZoomBoxAlignment();
             base.OnResize(e);
         }
 
@@ -359,14 +356,14 @@ namespace WinColorMeasure.UI
 
         private void SetImgBoxSize(Size szImg)
         {
-            if (szImg.Width <= rootBounds.Width && szImg.Height <= rootBounds.Height)
+            if (szImg.Width <= Width && szImg.Height <= Height)
             {
                 imgBox.Dock = DockStyle.Fill;
                 imgBox.SizeMode = PictureBoxSizeMode.Normal;
 
                 _scrollVisible = false;
             }
-            else if (szImg.Width > rootBounds.Width || szImg.Height > rootBounds.Height)
+            else if (szImg.Width > Width || szImg.Height > Height)
             {
                 imgBox.Dock = DockStyle.None;
                 imgBox.SizeMode = PictureBoxSizeMode.AutoSize;

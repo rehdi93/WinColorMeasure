@@ -30,20 +30,19 @@
         {
             this.zoomPopupBox = new System.Windows.Forms.PictureBox();
             this.imgBox = new System.Windows.Forms.PictureBox();
-            this.rootBounds = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.zoomPopupBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgBox)).BeginInit();
-            this.rootBounds.SuspendLayout();
             this.SuspendLayout();
             // 
             // zoomPopupBox
             // 
             this.zoomPopupBox.BackColor = System.Drawing.Color.White;
             this.zoomPopupBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.zoomPopupBox.Location = new System.Drawing.Point(3, 3);
-            this.zoomPopupBox.MinimumSize = new System.Drawing.Size(50, 50);
+            this.zoomPopupBox.Location = new System.Drawing.Point(0, 0);
+            this.zoomPopupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.zoomPopupBox.MinimumSize = new System.Drawing.Size(38, 41);
             this.zoomPopupBox.Name = "zoomPopupBox";
-            this.zoomPopupBox.Size = new System.Drawing.Size(100, 100);
+            this.zoomPopupBox.Size = new System.Drawing.Size(76, 82);
             this.zoomPopupBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.zoomPopupBox.TabIndex = 1;
             this.zoomPopupBox.TabStop = false;
@@ -56,7 +55,7 @@
             this.imgBox.Location = new System.Drawing.Point(0, 0);
             this.imgBox.Margin = new System.Windows.Forms.Padding(0);
             this.imgBox.Name = "imgBox";
-            this.imgBox.Size = new System.Drawing.Size(341, 265);
+            this.imgBox.Size = new System.Drawing.Size(256, 215);
             this.imgBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.imgBox.TabIndex = 2;
             this.imgBox.TabStop = false;
@@ -65,36 +64,25 @@
             this.imgBox.MouseLeave += new System.EventHandler(this.imgBox_MouseLeave);
             this.imgBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.imgBox_MouseMove);
             // 
-            // rootBounds
-            // 
-            this.rootBounds.AutoScroll = true;
-            this.rootBounds.Controls.Add(this.imgBox);
-            this.rootBounds.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rootBounds.Location = new System.Drawing.Point(0, 0);
-            this.rootBounds.Name = "rootBounds";
-            this.rootBounds.Size = new System.Drawing.Size(341, 265);
-            this.rootBounds.TabIndex = 3;
-            // 
             // ImageBoxZoom
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.Controls.Add(this.zoomPopupBox);
-            this.Controls.Add(this.rootBounds);
+            this.Controls.Add(this.imgBox);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ImageBoxZoom";
-            this.Size = new System.Drawing.Size(341, 265);
+            this.Size = new System.Drawing.Size(256, 215);
             ((System.ComponentModel.ISupportInitialize)(this.zoomPopupBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgBox)).EndInit();
-            this.rootBounds.ResumeLayout(false);
-            this.rootBounds.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.PictureBox zoomPopupBox;
         private System.Windows.Forms.PictureBox imgBox;
-        private System.Windows.Forms.Panel rootBounds;
     }
 }
