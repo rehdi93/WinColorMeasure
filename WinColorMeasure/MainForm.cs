@@ -53,8 +53,7 @@ namespace WinColorMeasure
             mpos.X -= scrollPos.X;
             mpos.Y -= scrollPos.Y;
 
-            var color = currentBitmap.GetPixel(mpos.X, mpos.Y);
-            return color;
+            return currentBitmap.GetPixel(mpos.X, mpos.Y);
         }
 
         void UpdateCurrentColor(Color color)
@@ -99,7 +98,7 @@ namespace WinColorMeasure
                                    $"B: {color.B}";
                         break;
                     case ColorInfoFormat.CMYK:
-                        var cmyk = CMYK.FromColor(color);
+                        var cmyk = new CMYK(color);
 
                         infoText = $"C: {cmyk.C:F3}\n" +
                                    $"M: {cmyk.M:F3}\n" +
@@ -121,7 +120,7 @@ namespace WinColorMeasure
                         infoText = $"{color.R} {color.G} {color.B}";
                         break;
                     case ColorInfoFormat.CMYK:
-                        var cmyk = CMYK.FromColor(color);
+                        var cmyk = new CMYK(color);
                         infoText = $"{cmyk.C:F3} {cmyk.M:F3} {cmyk.Y:F3} {cmyk.K:F3}";
                         break;
                     case ColorInfoFormat.HEX:

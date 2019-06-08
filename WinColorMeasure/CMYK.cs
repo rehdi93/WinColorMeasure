@@ -21,6 +21,30 @@ namespace WinColorMeasure
             _k = k;
         }
 
+        public CMYK(byte red, byte green, byte blue)
+        {
+            if (red == 0 && green == 0 && blue == 0)
+            {
+                // black
+                _c = _m = _y = _k = 0;
+            }
+
+            // adust RGB range
+            // [0-255] -> [0-1]
+            float r = red / 255f;
+            float g = green / 255f;
+            float b = blue / 255f;
+
+            // extract out K [0-1]
+            _k = 1 - Math.Max(r, Math.Max(g, b));
+
+            _c = (1 - r - _k) / (1 - _k);
+            _m = (1 - g - _k) / (1 - _k);
+            _y = (1 - b - _k) / (1 - _k);
+        }
+
+        public CMYK(Color c) : this(c.R, c.G, c.B) { }
+
         public float C
         {
             get => _c;
@@ -51,36 +75,6 @@ namespace WinColorMeasure
             return Math.Min(MaxValue, Math.Max(MinValue, nValue));
         }
 
-        public static CMYK FromRGB(byte r, byte g, byte b)
-        {
-            if (r == 0 && g == 0 && b == 0)
-            {
-                // black
-                return new CMYK(0f, 0f, 0f, 1f);
-            }
-
-            // adust RGB range
-            // [0-255] -> [0-1]
-            float r_ = r / 255f;
-            float g_ = g / 255f;
-            float b_ = b / 255f;
-
-            CMYK ret = default(CMYK);
-
-            // extract out K [0-1]
-            ret.K = 1 - Math.Max(r_, Math.Max(g_, b_));
-
-            ret.C = (1 - r_ - ret.K) / (1 - ret.K);
-            ret.M = (1 - g_ - ret.K) / (1 - ret.K);
-            ret.Y = (1 - b_ - ret.K) / (1 - ret.K);
-
-            return ret;
-        }
-
-        public static CMYK FromColor(Color color)
-        {
-            return FromRGB(color.R, color.G, color.B);
-        }
 
         public override bool Equals(object obj)
         {
