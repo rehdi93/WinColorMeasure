@@ -281,12 +281,13 @@ namespace WinColorMeasure.UI
             // set positioning and anchors
             Rectangle area = new Rectangle(new Point(3, 3), zoomPopupBox.Size);
             int rbOffset = _scrollVisible ? 25 : 5;
-            AnchorStyles anchor = AnchorStyles.Top | AnchorStyles.Left;
+            AnchorStyles anchor;
 
             switch (alignment)
             {
                 case ContentAlignment.TopLeft:
-                    //anchor = AnchorStyles.Top | AnchorStyles.Left;
+                default:
+                    anchor = AnchorStyles.Top | AnchorStyles.Left;
                     break;
                 case ContentAlignment.TopCenter:
                     area.Offset(Width / 2 - area.Width / 2, 0);
@@ -319,8 +320,6 @@ namespace WinColorMeasure.UI
                 case ContentAlignment.BottomRight:
                     area.Offset(Width - area.Right - rbOffset, Height - area.Bottom - rbOffset);
                     anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-                    break;
-                default:
                     break;
             }
 

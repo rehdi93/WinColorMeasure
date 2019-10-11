@@ -109,7 +109,7 @@
             // 
             resources.ApplyResources(this.refreshPreviewToolStripMenuItem, "refreshPreviewToolStripMenuItem");
             this.refreshPreviewToolStripMenuItem.Name = "refreshPreviewToolStripMenuItem";
-            this.refreshPreviewToolStripMenuItem.Click += new System.EventHandler(this.atualizarPreviewToolStripMenuItem_Click);
+            this.refreshPreviewToolStripMenuItem.Click += new System.EventHandler(this.updatePreviewTSMenuItem_Click);
             // 
             // copyColorTSMenuItem1
             // 
@@ -138,7 +138,7 @@
             // 
             resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitTSMenuItem_Click);
             // 
             // imageMenuItem
             // 
@@ -341,7 +341,7 @@
             resources.ApplyResources(this.atualizarPrevBtn, "atualizarPrevBtn");
             this.atualizarPrevBtn.Name = "atualizarPrevBtn";
             this.atualizarPrevBtn.UseVisualStyleBackColor = true;
-            this.atualizarPrevBtn.Click += new System.EventHandler(this.atualizarPreviewToolStripMenuItem_Click);
+            this.atualizarPrevBtn.Click += new System.EventHandler(this.updatePreviewTSMenuItem_Click);
             // 
             // rootLayout
             // 

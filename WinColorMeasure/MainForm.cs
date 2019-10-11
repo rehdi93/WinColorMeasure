@@ -71,7 +71,7 @@ namespace WinColorMeasure
             this.Opacity = 0.0;
 
             // Dispose current desktop bitmap
-            imageBoxZoom.Image?.Dispose();
+            currentBitmap?.Dispose();
 
             // get new desktop bitmap
             imageBoxZoom.Image = currentBitmap = GetDesktopImage();
@@ -216,9 +216,9 @@ namespace WinColorMeasure
             statusLabel.Text = string.Format(Properties.Strings.ColorCopied, _currentInfoFormat);
         }
 
-        private void sairToolStripMenuItem_Click(object sender, EventArgs e) { Close(); }
+        private void exitTSMenuItem_Click(object _, EventArgs __) { Close(); }
 
-        private void atualizarPreviewToolStripMenuItem_Click(object sender, EventArgs e)
+        private void updatePreviewTSMenuItem_Click(object _, EventArgs __)
         {
             UpdatePreviewImage();
         }
